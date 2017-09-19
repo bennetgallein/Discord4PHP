@@ -1,0 +1,9 @@
+{
+  "name": "open-code-community/Discord4PHP",
+  "description": "Unofficial API to interact with Discord",
+  "license": "GNU",
+  "authors": [
+    "name": "Bennet Gallein",
+    "email": "bennet@intranetproject.net"
+  ]
+}
