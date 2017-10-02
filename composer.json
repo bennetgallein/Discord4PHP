@@ -14,8 +14,12 @@
         "Discord\\": "src/"
       }
     },
-    "require": {},
-    "require-dev": {},
+    "require": {
+      "php": ">=7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.1"
+    },
     "repositories": [
     {
         "type": "vcs",
