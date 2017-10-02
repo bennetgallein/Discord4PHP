@@ -14,5 +14,12 @@
         "Discord\\": "src/"
       }
     },
-    "require": {}
+    "require": {},
+    "require-dev": {},
+    "repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/open-code-community/Discord4PHP"
+    }
+  ]
 }
