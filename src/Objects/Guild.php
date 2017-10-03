@@ -5,6 +5,7 @@ namespace Discord\Objects;
 */
 use \Discord\Objects\Role\RoleArray;
 use \Discord\Objects\Emojis\EmojisArray;
+use \Discord\Discord;
 
 class Guild {
 
@@ -43,7 +44,7 @@ class Guild {
         $ch = curl_init(); //
 
         curl_setopt_array($ch, array(
-            CURLOPT_URL => "http://discordapp.com/api/v6/guilds/" . $guildid,
+            CURLOPT_URL => "http://discordapp.com/api/v" . Discord::$apiv . "/guilds/" . $guildid,
             CURLOPT_HTTPHEADER     => array('Authorization: ' . $token_type . ' ' . $token),
             CURLOPT_RETURNTRANSFER => 1,
             CURLOPT_FOLLOWLOCATION => 1,

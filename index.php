@@ -4,6 +4,7 @@ namespace Discord;
 include_once 'vendor/autoload.php';
 
 use \Discord\Discord;
+use \Discord\Objects\Guild;
 
 $token = 'MzY0MzgxMDIyMjM5ODUwNDk3.DLTx_g.Um3SAdZCo7eShZIiaLtyPwN0XSE';
 
@@ -12,4 +13,10 @@ $discord = new Discord(array(
   'clientSecret'            => 'zL2FHInhzynyhH3ma2l-jkf9ES_kyZ-e',   // The client password assigned to you by the provider
   'redirectUri'             => 'http://localhost:80/Discord4PHP/'
 ), $token);
+
+$token_type = "Bot";
+$guildid = $discord->getGuildId();
+
+$guild = new Guild($guildid , $token_type, $token);
+echo $guild->getRoles()->getRoleByName("Moderator")->getName();
  ?>
