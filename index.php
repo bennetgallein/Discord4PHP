@@ -18,4 +18,5 @@ $token_type = "Bot";
 $guildid = $discord->getGuildId();
 
 $guild = new Guild($guildid , $token_type, $token);
+echo $guild->getRoles()->getRoleByName("Moderator")->getName();
  ?>
