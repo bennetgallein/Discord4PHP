@@ -4,19 +4,20 @@ namespace Discord\Objects;
 class Guild {
 
     public function __construct($guildid, $token_type, $token) {
-        header("Authentication: " . $token_type . " " . $token);
-        $ch = curl_init("http://discordapp.com/api/v6/guilds/" . $guildid); // such as http://example.com/example.xml
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_HEADER, 0);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'User-Agent: DiscordBot (http://localhost:80/Discord4PHP, 0.1)' ,
-            'Authentication: ' . $token_type . " " . $token
+        $ch = curl_init(); //
+
+        curl_setopt_array($ch, array(
+            CURLOPT_URL => "http://discordapp.com/api/v6/guilds/" . $guildid,
+            CURLOPT_HTTPHEADER     => array('Authorization: Bot ' . $token),
+            CURLOPT_RETURNTRANSFER => 1,
+            CURLOPT_FOLLOWLOCATION => 1,
+            CURLOPT_VERBOSE        => 1,
+            CURLOPT_SSL_VERIFYPEER => 0,
         ));
+
         $data = curl_exec($ch);
         curl_close($ch);
-
-        $data = json_decode($data);
-        echo $data;
+        echo json_encode($data, JSON_PRETTY_PRINT);
         //$this->id = $data['id'];
     }
 
