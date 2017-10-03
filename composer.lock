@@ -4,8 +4,55 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e4b95287f003e007be6623af20b63403",
+    "content-hash": "5822b4b85ca0c1d35e02a8966458e8e8",
     "packages": [
+        {
+            "name": "bennetgallein/oauth2-discord",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bennetgallein/oauth2-discord.git",
+                "reference": "92ef877acaf86deeb5724f3ce33f25c7ad0c591d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bennetgallein/oauth2-discord/zipball/92ef877acaf86deeb5724f3ce33f25c7ad0c591d",
+                "reference": "92ef877acaf86deeb5724f3ce33f25c7ad0c591d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.2",
+                "league/oauth2-client": "^1.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.5",
+                "phpunit/phpunit": "~4.0",
+                "satooshi/php-coveralls": "^1.0",
+                "symfony/var-dumper": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Discord\\OAuth\\": "src/Discord"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Cole",
+                    "email": "david@team-reflex.com"
+                },
+                {
+                    "name": "Bennet Gallein",
+                    "email": "bennet@intranetproject.net"
+                }
+            ],
+            "description": "OAuth2 client for authenticating with the Discord API servers. THIS IS A CLONE FROM team-reflex/oauth2-discord SINCE THEY STOPED DEVELOPING!",
+            "time": "2017-10-03T11:08:49+00:00"
+        },
         {
             "name": "doctrine/inflector",
             "version": "v1.2.0",
@@ -842,49 +889,6 @@
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
             "time": "2017-07-29T21:54:42+00:00"
-        },
-        {
-            "name": "team-reflex/oauth2-discord",
-            "version": "v1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/teamreflex/oauth2-discord.git",
-                "reference": "01f79da934603089e34dada4cab4cb6d019f3cfd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/teamreflex/oauth2-discord/zipball/01f79da934603089e34dada4cab4cb6d019f3cfd",
-                "reference": "01f79da934603089e34dada4cab4cb6d019f3cfd",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "^5.2",
-                "league/oauth2-client": "^1.3"
-            },
-            "require-dev": {
-                "mockery/mockery": "^0.9.5",
-                "phpunit/phpunit": "~4.0",
-                "satooshi/php-coveralls": "^1.0",
-                "symfony/var-dumper": "^3.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Discord\\OAuth\\": "src/Discord"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "David Cole",
-                    "email": "david@team-reflex.com"
-                }
-            ],
-            "description": "OAuth2 client for authenticating with the Discord API servers",
-            "time": "2016-06-20T22:20:04+00:00"
         }
     ],
     "packages-dev": [
@@ -2340,7 +2344,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "bennetgallein/oauth2-discord": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

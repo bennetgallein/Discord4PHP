@@ -16,7 +16,7 @@
     },
     "require": {
       "php": ">=7.0",
-        "team-reflex/oauth2-discord": "^1.0"
+        "bennetgallein/oauth2-discord": "@dev"
     },
     "require-dev": {
         "phpunit/phpunit": "^6.1"

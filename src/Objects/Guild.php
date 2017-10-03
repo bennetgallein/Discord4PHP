@@ -1,25 +1,12 @@
 <?php
 namespace Discord\Objects;
+/*
+    https://discordapp.com/developers/docs/resources/guild#guild-object
+*/
+use \Discord\Objects\Role\RoleArray;
+use \Discord\Objects\Emojis\EmojisArray;
 
 class Guild {
-
-    public function __construct($guildid, $token_type, $token) {
-        $ch = curl_init(); //
-
-        curl_setopt_array($ch, array(
-            CURLOPT_URL => "http://discordapp.com/api/v6/guilds/" . $guildid,
-            CURLOPT_HTTPHEADER     => array('Authorization: Bot ' . $token),
-            CURLOPT_RETURNTRANSFER => 1,
-            CURLOPT_FOLLOWLOCATION => 1,
-            CURLOPT_VERBOSE        => 1,
-            CURLOPT_SSL_VERIFYPEER => 0,
-        ));
-
-        $data = curl_exec($ch);
-        curl_close($ch);
-        echo json_encode($data, JSON_PRETTY_PRINT);
-        //$this->id = $data['id'];
-    }
 
     public $id; // guild id @return snowflake
     public $name; // guild name @return string
@@ -31,9 +18,9 @@ class Guild {
     public $afk_timeout; // afk timeout in seconds @return integer
     public $embed_enabled; // is this guild embeddable @return boolean
     public $embed_channel_id; // id of embedded channel @return snowflake
-    public $vertification_level; // level of vertification required for the guild @return integer
+    public $verification_level; // level of vertification required for the guild @return integer
     public $default_message_notifications; // default message notifactin level @return integer
-    public $explicit_content_filer; // default explicit content filter level @return integer
+    public $explicit_content_filter; // default explicit content filter level @return integer
     public $roles; // roles in a guild @return array of roles objects
     public $emojis; // custom guild emojis @return array of emoji objects
     public $features; // enabled guild features @return array of strings
@@ -50,6 +37,59 @@ class Guild {
     public $members; // users in the guild @return array of guild member objects
     public $channels; // channels in the guild @return array of channel objects
     public $presences; // presences of the users in the guild @return array of partial presence update objects
+
+    public function __construct($guildid, $token_type, $token) {
+
+        $ch = curl_init(); //
+
+        curl_setopt_array($ch, array(
+            CURLOPT_URL => "http://discordapp.com/api/v6/guilds/" . $guildid,
+            CURLOPT_HTTPHEADER     => array('Authorization: ' . $token_type . ' ' . $token),
+            CURLOPT_RETURNTRANSFER => 1,
+            CURLOPT_FOLLOWLOCATION => 1,
+            CURLOPT_VERBOSE        => 1,
+            CURLOPT_SSL_VERIFYPEER => 0,
+        ));
+
+        $data = curl_exec($ch);
+        curl_close($ch);
+        $data = json_decode($data, true);
+
+        if (isset($data['code']) && isset($data['message'])) {
+            echo $data['code'] . ": " . $data['message'];
+        } else {
+            $this->id = $data['id'];
+            $this->name = $data['name'];
+            $this->icon = $data['icon'];
+            $this->splash = $data['splash'];
+            $this->owner_id = $data['owner_id'];
+            $this->region = $data['region'];
+            $this->afk_channel_id = $data['afk_channel_id'];
+            $this->afk_timeout = $data['afk_timeout'];
+            $this->embed_enabled = $data['embed_enabled'];
+            $this->embed_channel_id = $data['embed_channel_id'];
+            $this->verification_level = $data['verification_level'];
+            $this->default_message_notifications = $data['default_message_notifications'];
+            $this->explicit_content_filter = $data['explicit_content_filter'];
+            $this->roles = new RoleArray($data['roles']);
+            $this->emojis = new EmojisArray($data['emojis']);
+            $this->features = $data['features'];
+            $this->mfa_level = $data['mfa_level'];
+            $this->application_id = $data['application_id'];
+            $this->widget_enabled = $data['widget_enabled'];
+            $this->widget_channel_id = $data['widget_channel_id'];
+            if (isset($data['joined_at'])) {
+                $this->joined_at = $data['joined_at'];
+                $this->large = $data['large'];
+                $this->unavailable = $data['unavailable'];
+                $this->member_count = $data['member_count'];
+                $this->voice_states = $data['voice_states'];
+                $this->members = $data['members'];
+                $this->channels = $data['channles'];
+                $this->presences = $data['presences'];
+            }
+        }
+    }
 
     public function getId() {
         return $this->id;

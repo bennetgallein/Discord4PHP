@@ -39,7 +39,7 @@ class Discord {
            $code = $refresh;
 
            $guild = new Guild($guildid , $token_type, $token);
-
+           var_dump($guild->getEmojis());
            // Get a refresh token
 
            //$this->$accessToken = $refresh;// Store the new token.
