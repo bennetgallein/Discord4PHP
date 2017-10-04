@@ -1,0 +1,146 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+/**
+ * Emoji.php
+ *
+ */
+namespace Discord\Objects\Emojis;
+/**
+ * Emoji Object REFERENCE TO DISCORD HERE
+ *
+ * @todo function to return direct image url
+ */
+class Emoji {
+
+    /** @var integer|null The ID of the emoji */
+    public $id;
+    /** @var string|null The Name of the emoji */
+    public $name;
+    /** @var array|null Array of roleid's whom are whitelisted to use it */
+    public $roles;
+    /** @var boolean|null Whether this emoji must be wrapped in colons */
+    public $require_colons;
+    /** @var boolean|null whether this emoji is managed by an integration */
+    public $managed;
+
+    /**
+     * This is the Emoji Object Constructor
+     *
+     * This creates a new Emoji Object based on the array given.
+     *
+     * @param array $emoji is a array of an emoji objects.
+     *
+     * @return void
+     */
+    public function __construct($emoji) {
+        $this-&gt;id = $emoji['id'];
+        $this-&gt;name = $emoji['name'];
+        $this-&gt;roles = $emoji['roles'];
+        $this-&gt;require_colons = $emoji['require_colons'];
+        $this-&gt;managed = $emoji['managed'];
+    }
+    /**
+     * Get the Emoji ID
+     *
+     * Returns the unique ID for the Emoji
+     *
+     * @param none
+     *
+     * @return integer
+     */
+    public function getId() {
+        return $this-&gt;id;
+    }
+    /**
+     * Get the Emojis name
+     *
+     * Returns the name of the Emoji
+     *
+     * @param none
+     *
+     * @return string
+     */
+    public function getName() {
+        return $this-&gt;name;
+    }
+    /**
+     * Get the roles that are whitelisted
+     *
+     * This returns an array of role id's which are allow to use this emoji.
+     *
+     * @param none
+     *
+     * @return array
+     */
+    public function getRoles(){
+        return $this-&gt;roles;
+    }
+    /**
+     * Get the boolean if the emoji requires colons
+     *
+     * This returns a boolean if the emoji needs to wrapped in &quot;:&quot;
+     *
+     * @param none
+     *
+     * @return boolean
+     */
+    public function getRequireColons() {
+        return $this-&gt;require_colons;
+    }
+    /**
+     * Get the boolean if the emoji is managed
+     *
+     * This return a boolean if the emoji is managed by an integration
+     *
+     * @param none
+     *
+     * @return boolean
+     */
+    public function getManaged() {
+        return $this-&gt;managed;
+    }
+}
+</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

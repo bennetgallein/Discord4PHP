@@ -1,33 +1,100 @@
 <?php
+/**
+ * Emoji.php
+ *
+ */
 namespace Discord\Objects\Emojis;
-
+/**
+ * Emoji Object REFERENCE TO DISCORD HERE
+ *
+ * @todo function to return direct image url
+ */
 class Emoji {
 
-    public $id; // emoji id @return snowflake
-    public $name; // emoji name @return string
-    public $roles; // roles this emoji is whitelisted to @return array of roleid's
-    public $require_colons; // whether this emoji must be wrapped in colons @return boolean
-    public $managed; // whether this emoji is managed @return boolean
+    /** @var integer|null The ID of the emoji */
+    public $id;
+    /** @var string|null The Name of the emoji */
+    public $name;
+    /** @var array|null Array of roleid's whom are whitelisted to use it */
+    public $roles;
+    /** @var boolean|null Whether this emoji must be wrapped in colons */
+    public $require_colons;
+    /** @var boolean|null whether this emoji is managed by an integration */
+    public $managed;
 
-    public function __construct($data) {
-        $this->id = $data['id'];
-        $this->name = $data['name'];
-        $this->roles = $data['roles'];
-        $this->require_colons = $data['require_colons'];
-        $this->managed = $data['managed'];
+    /**
+     * This is the Emoji Object Constructor
+     *
+     * This creates a new Emoji Object based on the array given.
+     *
+     * @param array $emoji is a array of an emoji objects.
+     *
+     * @return void
+     */
+    public function __construct($emoji) {
+        $this->id = $emoji['id'];
+        $this->name = $emoji['name'];
+        $this->roles = $emoji['roles'];
+        $this->require_colons = $emoji['require_colons'];
+        $this->managed = $emoji['managed'];
     }
+    /**
+     * Get the Emoji ID
+     *
+     * Returns the unique ID for the Emoji
+     *
+     * @param none
+     *
+     * @return integer
+     */
     public function getId() {
         return $this->id;
     }
+    /**
+     * Get the Emojis name
+     *
+     * Returns the name of the Emoji
+     *
+     * @param none
+     *
+     * @return string
+     */
     public function getName() {
         return $this->name;
     }
+    /**
+     * Get the roles that are whitelisted
+     *
+     * This returns an array of role id's which are allow to use this emoji.
+     *
+     * @param none
+     *
+     * @return array
+     */
     public function getRoles(){
         return $this->roles;
     }
+    /**
+     * Get the boolean if the emoji requires colons
+     *
+     * This returns a boolean if the emoji needs to wrapped in ":"
+     *
+     * @param none
+     *
+     * @return boolean
+     */
     public function getRequireColons() {
         return $this->require_colons;
     }
+    /**
+     * Get the boolean if the emoji is managed
+     *
+     * This return a boolean if the emoji is managed by an integration
+     *
+     * @param none
+     *
+     * @return boolean
+     */
     public function getManaged() {
         return $this->managed;
     }

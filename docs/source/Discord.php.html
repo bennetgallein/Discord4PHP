@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+namespace Discord;
+
+use \Discord\Objects\Guild;
+
+class Discord {
+
+    public $token;
+    public static $apiv = 6;
+    public $guildid;
+
+    public function __construct($array, $bottoken) {
+        $token = $bottoken;
+
+        \Discord\OAuth\DefaultScopes::setDefaultScopes(['bot']);
+
+        $provider = new \Discord\OAuth\Discord([
+	        'clientId'     =&gt; $array['clientId'],
+	        'clientSecret' =&gt; $array['clientSecret'],
+	        'redirectUri'  =&gt; $array['redirectUri']
+        ]);
+
+     if (!isset($_GET['code'])) {
+	      echo '&lt;a href=&quot;'.$provider-&gt;getAuthorizationUrl().'&quot;&gt;Login with Discord&lt;/a&gt;';
+      } else {
+	       $code = $provider-&gt;getAccessToken('authorization_code', [
+		         'code' =&gt; $_GET['code']
+           ]);
+           // Get the user object.
+           $user = $provider-&gt;getResourceOwner($code);
+           //echo &quot;&lt;pre&gt;&quot; . var_dump($user) . &quot;&lt;/pre&gt;&lt;br&gt;&quot;;
+           // Get the guilds and connections.
+
+           $this-&gt;guildid = $_GET['guild_id'];
+
+           $refresh = $provider-&gt;getAccessToken('refresh_token', [
+                 'refresh_token' =&gt; $code-&gt;getRefreshToken(),
+           ]);
+           $code = $refresh;
+
+           //$this-&gt;$accessToken = $refresh;// Store the new token.
+       }
+    }
+    public function getGuildId() {
+        return $this-&gt;guildid;
+    }
+    public function getDiscordAccessToken() {
+        return $this-&gt;token;
+    }
+}
+</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

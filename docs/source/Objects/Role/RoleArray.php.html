@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+/**
+ * RoleArray.php
+ */
+namespace Discord\Objects\Role;
+
+use \Discord\Objects\Role\Role;
+/**
+ * This is a Array of Role Objects. See the Role Object for detailed information.
+ */
+class RoleArray {
+
+    /** @var object|null Array of Role Objects  */
+    public $allroles;
+
+    /**
+     * This is the RoleArray Object Constructor
+     *
+     * This creates a new Array of Roles based on the Array given;
+     *
+     * @param array $data is an array of roles
+     *
+     * @return void
+     */
+    public function __construct($data) {
+        $this-&gt;allroles = array();
+        foreach ($data as $role) {
+            $this-&gt;allroles[$role['name']] = new Role($role);
+        }
+    }
+    /**
+     * Get a Role Object by name
+     *
+     * Return the Role object of the role with the name given
+     *
+     * @param string $name the name of the role to return.
+     *
+     * @return object
+     */
+    public function getRoleByName($name) {
+        return $this-&gt;allroles[$name];
+    }
+    /**
+     * Get all Roles as an array
+     *
+     * Returns all the Roles that are stored
+     *
+     * @param none
+     *
+     * @return array
+     */
+    public function getAllRoles() {
+        return $this-&gt;allroles;
+    }
+}
+</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>
