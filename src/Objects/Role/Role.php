@@ -8,7 +8,7 @@ namespace Discord\Objects\Role;
  */
 class Role {
 
-    /** The ID of the Role */
+    /** The ID of the Role @return integer*/
     public $id;
     /** The Name of the Role */
     public $name;
