@@ -85,16 +85,63 @@
     </class>
     <source>eJylk91u2zAMhe8N+B14EaBugKYP4P203YbdbcC2uyQoGJmJ1TmSIckpgq3vPolSGnuuiwEzDMSRyHPIj9Kb923d5tn1fJ5nMIdPe/0g7a0xeFzwBsyv80zhnmyLguCjtEKbavV180DC2VWML/MszzpLsHp5P/6UZ5sftbTgX1TAXqC30RpS4gK+E4GrabAMW22gIoeyoQqk8n/36KRWi1SoaNDafhPwK5QG/vHWcHNAA5qlfquuaSbMWSrktN2mkQJmxIIYgsueXvzotfNcb9RNRX/QyjrTCafNKWOYKQyhI08DFD3+VZOFDVrfrFasHjd38kBqpHXTosE9cJkwq9BhQownxdjHONGQ64yCg5bVaXFIYNspETjD/b04dVOwxWUgDOmZOd/O1bseLngb3YvL8hzmx0YoaogKgDYRHmi9rLeMkcuLcCQv1muvH5gxqiKp9Jye4ufTeGSfyQH6E5Ag4xnUCM83pmM5/HnCYdjoJQyB9YOlamocSiuaJD4wnEC+I3fbNNG0GCBKImNK5ettD+/U5ggB5kTbvTsYLw48Slfzash6/Sj6gyLVDmYcme4HlwlOQ6P1z3AUFv9Lh6u7O37xJgVb/RukJceuz6z8+we29HJq</source>
   </file>
-  <file path="Objects\Guild\GuildMemberArray.php" generated-path="Objects.Guild.GuildMemberArray.html" hash="a73e67672a8a4bd3fff5e18d7df859f7" package="Default">
+  <file path="Objects\Guild\GuildMemberArray.php" generated-path="Objects.Guild.GuildMemberArray.html" hash="2a3e80ea19e2481c6f50dc04a45619e5" package="Default">
     <docblock line="0">
-      <description></description>
+      <description>GuildMemberArray.php</description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
+    <namespace-alias name="GuildMember">\Discord\Objects\Guild\GuildMember</namespace-alias>
+    <class final="false" abstract="false" namespace="Discord\Objects\Guild" line="13" package="Default">
+      <extends/>
+      <name>GuildMemberArray</name>
+      <full_name>\Discord\Objects\Guild\GuildMemberArray</full_name>
+      <docblock line="13">
+        <description></description>
+        <long-description></long-description>
+        <tag name="todo" line="13" description="make the key the id of the user object"/>
+        <tag name="package" line="13" description="Default"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="16" package="Default">
+        <name>$guildmembers</name>
+        <full_name>\Discord\Objects\Guild\GuildMemberArray::guildmembers</full_name>
+        <default></default>
+        <docblock line="16">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="16" description="&lt;p&gt;array of GuildMember objects&lt;/p&gt;" type="array|null" variable="">
+            <type>array</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="27" package="Default">
+        <name>__construct</name>
+        <full_name>\Discord\Objects\Guild\GuildMemberArray::__construct()</full_name>
+        <docblock line="27">
+          <description>This is the GuildMemberArray Object Constructor</description>
+          <long-description>This creates a new Array of GuildMembers based on the Array given</long-description>
+          <tag name="param" line="27" description="&lt;p&gt;is an array of emojis&lt;/p&gt;" type="array" variable="$data">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="27" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+    </class>
+    <markers>
+      <todo line="13">make the key the id of the user object</todo>
+    </markers>
     <parse_markers>
-      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="13" code="PPC:ERR-50005">No summary for class \Discord\Objects\Guild\GuildMemberArray</error>
     </parse_markers>
-    <source>eJx1UctugzAQvCPxD3vgQCK1+QD6SNRKPbW99FaqaDGbxAnYyDaporb/Xj+CAiGxLNnCM7Mzw91js2niaDadxhFM4aXlVflKdUFqoRQebv0rTGdxJLAm3SAjeOaaSVXm78WWmNG5J2VxFEetJsgvPuc95ew072NDwDWgAHTjQK6CBQhIkEHjaAE8EeZGlhJq3BEYy9/RwZ+8dHR3szY6quexCrUeZYMfZxns8qJ7VMHEr2ir6szP0E4wY1fTFhVnkKwdpvYYnfVUw8XntCntdu5GPkJR8CSFNqplRqqON+QzRWjItgWCvmFxwaCGAjXZHoSfFCBrvicxUpw3qLA+xkxKNHj+I6iWW67HREWmVQL2kpfdx2Edq1Yww62H5ZJ1mVI/YuI6h+NKjA1189DvDu7D+HSSnXAraXOzDQQJQA1JgA/Urih+uqp6DaUd18LIvHG2Sydfduw1WM/HX7jaw+5/+iH2iw==</source>
+    <source>eJx1UdtqwjAYvi/0Hf6LglrYfIDuoGywq7Gb3VmRNP3VaJuUHByy7d2XQ4utdSGQ0Hyn/+vDc7Nv4miepnEEKbwZVpXvWBcol1KS871/hXQeR5zUqBpCEV6ZokKW+UdxQKpV7klZHMWRUQj5zee8p5xd/D73CEwB4UCcHYhtiAABCSJotBE8DxZalAJqckTQln7Esz9Z6djuZlN0TE+jFVFqNBp8O0Gwy4ueiAwZfripqqs4wzRe1BEbU1SMQrJzmNpjVNZTDRc/ph3SbpdulCP0BC+CKy0N1UJ2vCGfSiQabVnA8QuWNwIqKIhC2wP3TgGyYyfkI8VFQySp2zGTkmhy/R+wFgemxkSJ2kgOJ8HK7uOwjq3hVDObYbOh3UxTbzFznUO7Em2HunvqdwePwX46yy64rbBz0z0ECSAKkgAfqP2juGqxqwln9DhZr62Fa69X2rST63n+hqs97P4DC7vvjQ==</source>
   </file>
   <file path="Objects\Emojis\Emoji.php" generated-path="Objects.Emojis.Emoji.html" hash="79ca867ed4607b3bbceb308989891e7e" package="Default">
     <docblock line="0">

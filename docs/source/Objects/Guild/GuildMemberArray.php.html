@@ -44,7 +44,7 @@ use \Discord\Objects\Guild\GuildMember;
 /**
  * The is an array of Guild Member objects
  */
- 
+
 /** @todo make the key the id of the user object */
 class GuildMemberArray {
 
@@ -63,7 +63,7 @@ class GuildMemberArray {
     public function __construct($data) {
         $this-&gt;guildmembers = array();
         foreach ($data as $member) {
-            $this-&gt;guildmembers[new GuildMember($member)-&gt;getNick()] = new GuildMember($member);
+            $this-&gt;guildmembers[$member['nick']] = new GuildMember($member);
         }
     }
 }
