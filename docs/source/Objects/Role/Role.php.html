@@ -1,0 +1,188 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+/**
+ * Role.php
+ */
+namespace Discord\Objects\Role;
+/**
+ *    Role Object. Also see https://discordapp.com/developers/docs/topics/permissions#role-object .
+ */
+class Role {
+
+    /** @var integer|null The ID of the Role */
+    public $id;
+    /** @var string|null The Name of the Role */
+    public $name;
+    /** @var integer|null The color of the Role */
+    public $color;
+    /** @var boolean|null The boolean if the Role is hoisted */
+    public $hoist;
+    /** @var integer|null The Position of the Role */
+    public $position;
+    /** @var integer|null The Permission int of the Role */
+    public $permissions;
+    /** @var boolean|null The boolean if a Role is managed by a Integration */
+    public $managed;
+    /** @var boolean|null The boolean if a Role is mentionable */
+    public $mentionable;
+
+    /**
+     * This is the Role Object Constructor
+     *
+     * This creates a new Role Object based on the array given.
+     *
+     * @param array $role is a array of an role objects.
+     *
+     * @return void
+     */
+    public function __construct($role) {
+        $this-&gt;id = $role['id'];
+        $this-&gt;name = $role['name'];
+        $this-&gt;color = $role['color'];
+        $this-&gt;hoist = $role['hoist'];
+        $this-&gt;position = $role['position'];
+        $this-&gt;permissions = $role['permissions'];
+        $this-&gt;managed = $role['managed'];
+        $this-&gt;mentionable = $role['mentionable'];
+    }
+    /**
+     * Get the Role ID
+     *
+     * Returns the unique Id for the Role.
+     *
+     * @param none
+     *
+     * @return integer
+     */
+    public function getId() {
+        return $this-&gt;id;
+    }
+    /**
+     * Get the Role name
+     *
+     * Returns the name for the Role.
+     *
+     * @param none
+     *
+     * @return string
+     */
+    public function getName() {
+        return $this-&gt;name;
+    }
+    /**
+     * Get the Role Color
+     *
+     * Returns the color for the Role.
+     *
+     * @param none
+     *
+     * @return integer
+     */
+    public function getColor() {
+        return $this-&gt;color;
+    }
+    /**
+     * Get if the Role is hoisted
+     *
+     * Returns the boolean if a group is collected on the side.
+     *
+     * @param none
+     *
+     * @return boolean
+     */
+    public function getHoist() {
+        return $this-&gt;hoist;
+    }
+    /**
+     * Get the Role Position
+     *
+     * Returns the posistion of the Role.
+     *
+     * @param none
+     *
+     * @return integer
+     */
+    public function getPosition() {
+        return $this-&gt;position;
+    }
+    /**
+     * Get the Role Permissions
+     *
+     * Returns the permission for the Role.
+     *
+     * @param none
+     *
+     * @return integer
+     */
+    public function getPermissions() {
+        return $this-&gt;permissions;
+    }
+    /**
+     * Get if the Role is managed
+     *
+     * Returns the boolean if the Role is managed by a integration
+     *
+     * @param none
+     *
+     * @return boolean
+     */
+    public function getManaged() {
+        return $this-&gt;managed;
+    }
+    /**
+     * Get if the Role is mentionable
+     *
+     * Returns a boolean if the Role is mentionable
+     *
+     * @param none
+     *
+     * @return boolean
+     */
+    public function getMentionable() {
+        return $this-&gt;mentionable;
+    }
+}
+</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

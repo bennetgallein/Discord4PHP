@@ -8,29 +8,29 @@ namespace Discord\Objects\Role;
  */
 class Role {
 
-    /** The ID of the Role @return integer*/
+    /** @var integer|null The ID of the Role */
     public $id;
-    /** The Name of the Role */
+    /** @var string|null The Name of the Role */
     public $name;
-    /** The color of the Role */
+    /** @var integer|null The color of the Role */
     public $color;
-    /** The boolean if the Role is hoisted */
+    /** @var boolean|null The boolean if the Role is hoisted */
     public $hoist;
-    /** The Position of the Role */
+    /** @var integer|null The Position of the Role */
     public $position;
-    /** The Permission int of the Role */
+    /** @var integer|null The Permission int of the Role */
     public $permissions;
-    /** The boolean if a Role is managed by a Integration */
+    /** @var boolean|null The boolean if a Role is managed by a Integration */
     public $managed;
-    /** The boolean if a Role is mentionable */
+    /** @var boolean|null The boolean if a Role is mentionable */
     public $mentionable;
 
     /**
      * This is the Role Object Constructor
      *
-     * This create a new Role Object based on the array given.
+     * This creates a new Role Object based on the array given.
      *
-     * @param array $role is a array of an role object.
+     * @param array $role is a array of an role objects.
      *
      * @return void
      */

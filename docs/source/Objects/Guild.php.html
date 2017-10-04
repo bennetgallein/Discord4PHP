@@ -1,0 +1,240 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+namespace Discord\Objects;
+/*
+    https://discordapp.com/developers/docs/resources/guild#guild-object
+*/
+use \Discord\Objects\Role\RoleArray;
+use \Discord\Objects\Emojis\EmojisArray;
+use \Discord\Discord;
+
+class Guild {
+
+    public $id; // guild id @return snowflake
+    public $name; // guild name @return string
+    public $icon; // icon hash https://discordapp.com/developers/docs/reference#image-formatting @return string
+    public $splash; // splash hash https://discordapp.com/developers/docs/reference#image-formatting @return string
+    public $owner_id; // id of owner @return snowflake
+    public $region; // voice region id @return string
+    public $afk_channel_id; // id of afk channel @return snowflake
+    public $afk_timeout; // afk timeout in seconds @return integer
+    public $embed_enabled; // is this guild embeddable @return boolean
+    public $embed_channel_id; // id of embedded channel @return snowflake
+    public $verification_level; // level of vertification required for the guild @return integer
+    public $default_message_notifications; // default message notifactin level @return integer
+    public $explicit_content_filter; // default explicit content filter level @return integer
+    public $roles; // roles in a guild @return array of roles objects
+    public $emojis; // custom guild emojis @return array of emoji objects
+    public $features; // enabled guild features @return array of strings
+    public $mfa_level; // required MFA Level for the guild @return integer
+    public $application_id; // 	application id of the guild creator if it is bot-created @return ?snowflake
+    public $widget_enabled; // whether or not the server widget is enabled @return boolean
+    public $widget_channel_id; // the channel id for the server widget @return snowflake
+    // belows are only sent with the GUILD_CREATE Event
+    public $joined_at; // when this guild was joined at @return ISO8601 timestamp
+    public $large; // whether this is considered a large guild @return boolean
+    public $unavailable; // is this guild unavailable @return boolean
+    public $member_count; // total number of members in this guild @return integer
+    public $voice_states; // (without the guild_id key) @return array of partial voice state objects
+    public $members; // users in the guild @return array of guild member objects
+    public $channels; // channels in the guild @return array of channel objects
+    public $presences; // presences of the users in the guild @return array of partial presence update objects
+
+    public function __construct($guildid, $token_type, $token) {
+
+        $ch = curl_init(); //
+
+        curl_setopt_array($ch, array(
+            CURLOPT_URL =&gt; &quot;http://discordapp.com/api/v&quot; . Discord::$apiv . &quot;/guilds/&quot; . $guildid,
+            CURLOPT_HTTPHEADER     =&gt; array('Authorization: ' . $token_type . ' ' . $token),
+            CURLOPT_RETURNTRANSFER =&gt; 1,
+            CURLOPT_FOLLOWLOCATION =&gt; 1,
+            CURLOPT_VERBOSE        =&gt; 1,
+            CURLOPT_SSL_VERIFYPEER =&gt; 0,
+        ));
+
+        $data = curl_exec($ch);
+        curl_close($ch);
+        $data = json_decode($data, true);
+
+        if (isset($data['code']) &amp;&amp; isset($data['message'])) {
+            echo $data['code'] . &quot;: &quot; . $data['message'];
+        } else {
+            $this-&gt;id = $data['id'];
+            $this-&gt;name = $data['name'];
+            $this-&gt;icon = $data['icon'];
+            $this-&gt;splash = $data['splash'];
+            $this-&gt;owner_id = $data['owner_id'];
+            $this-&gt;region = $data['region'];
+            $this-&gt;afk_channel_id = $data['afk_channel_id'];
+            $this-&gt;afk_timeout = $data['afk_timeout'];
+            $this-&gt;embed_enabled = $data['embed_enabled'];
+            $this-&gt;embed_channel_id = $data['embed_channel_id'];
+            $this-&gt;verification_level = $data['verification_level'];
+            $this-&gt;default_message_notifications = $data['default_message_notifications'];
+            $this-&gt;explicit_content_filter = $data['explicit_content_filter'];
+            $this-&gt;roles = new RoleArray($data['roles']);
+            $this-&gt;emojis = new EmojisArray($data['emojis']);
+            $this-&gt;features = $data['features'];
+            $this-&gt;mfa_level = $data['mfa_level'];
+            $this-&gt;application_id = $data['application_id'];
+            $this-&gt;widget_enabled = $data['widget_enabled'];
+            $this-&gt;widget_channel_id = $data['widget_channel_id'];
+            if (isset($data['joined_at'])) {
+                $this-&gt;joined_at = $data['joined_at'];
+                $this-&gt;large = $data['large'];
+                $this-&gt;unavailable = $data['unavailable'];
+                $this-&gt;member_count = $data['member_count'];
+                $this-&gt;voice_states = $data['voice_states'];
+                $this-&gt;members = $data['members'];
+                $this-&gt;channels = $data['channles'];
+                $this-&gt;presences = $data['presences'];
+            }
+        }
+    }
+
+    public function getId() {
+        return $this-&gt;id;
+    }
+    public function getName() {
+        return $this-&gt;name;
+    }
+    public function getIcon() {
+        return $this-&gt;icon;
+    }
+    public function getSplash() {
+        return $this-&gt;splash;
+    }
+    public function getOwnerId() {
+        return $this-&gt;owner_id;
+    }
+    public function getRegion() {
+        return $this-&gt;region;
+    }
+    public function getAfkChannelId() {
+        return $this-&gt;afk_channel_id;
+    }
+    public function getAfkTimeout() {
+        return $this-&gt;afk_timeout;
+    }
+    public function getEmbedEnabled() {
+        return $this-&gt;embed_enabled;
+    }
+    public function getEmbedChannelId() {
+        return $this-&gt;embed_channel_id;
+    }
+    /*
+     * @return int 0 - 4
+     * https://discordapp.com/developers/docs/resources/guild#guild-object-verification-level
+     */
+    public function getVertificationLevel() {
+        return $this-&gt;vertification_level;
+    }
+    /*
+     * @return int 0 or 1
+     * https://discordapp.com/developers/docs/resources/guild#guild-object-default-message-notification-level
+     */
+    public function getDefaultMessageNotifications() {
+        return $this-&gt;default_message_notifications;
+    }
+    /*
+     * @return int 0 - 2
+     * https://discordapp.com/developers/docs/resources/guild#guild-object-explicit-content-filter-level
+     */
+    public function getExplixitContentFilter() {
+        return $this-&gt;explicit_content_filer;
+    }
+    public function getRoles() {
+        return $this-&gt;roles;
+    }
+    public function getEmojis() {
+        return $this-&gt;emojis;
+    }
+    public function getFeatures() {
+        return $this-&gt;features;
+    }
+    /*
+     * @return int 0 or 1
+     * https://discordapp.com/developers/docs/resources/guild#guild-object-mfa-level
+     */
+    public function getMFALevel() {
+        return $this-&gt;mfa_level;
+    }
+    public function getApplicationId() {
+        return $this-&gt;application_id;
+    }
+    public function getWidgetEnabled() {
+        return $this-&gt;widget_enabled;
+    }
+    public function getWidgetChannelId() {
+        return $this-&gt;widget_channel_id;
+    }
+    public function getJoinedAt() {
+        return $this-&gt;joined_at;
+    }
+    public function getLarge() {
+        return $this-&gt;large;
+    }
+    public function getUnavailable() {
+        return $this-&gt;unavailable;
+    }
+    public function getMemberCount() {
+        return $this-&gt;member_count;
+    }
+    public function getVoiceStates() {
+        return $this-&gt;voice_states;
+    }
+    public function getMembers() {
+        return $this-&gt;members;
+    }
+    public function getChannels() {
+        return $this-&gt;channels;
+    }
+    public function getPresences() {
+        return $this-&gt;presences;
+   }
+}
+</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>
