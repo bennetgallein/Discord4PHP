@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<checkstyle version="1.3.0">
+  <file name="Objects\Emojis\EmojisArray.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="6" severity="error" message="No summary for class \Discord\Objects\Emojis\EmojisArray" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="10" severity="error" message="Argument $data is missing from the Docblock of __construct" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="10" severity="error" message="No summary for method __construct()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="16" severity="error" message="No summary for method getAllEmojis()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="19" severity="error" message="Argument $name is missing from the Docblock of getEmojiByName" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="19" severity="error" message="No summary for method getEmojiByName()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="8" severity="error" message="No summary for property $emojisarray" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Objects\Emojis\Emoji.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="4" severity="error" message="No summary for class \Discord\Objects\Emojis\Emoji" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="12" severity="error" message="Argument $data is missing from the Docblock of __construct" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="12" severity="error" message="No summary for method __construct()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="19" severity="error" message="No summary for method getId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="22" severity="error" message="No summary for method getName()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="25" severity="error" message="No summary for method getRoles()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="28" severity="error" message="No summary for method getRequireColons()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="31" severity="error" message="No summary for method getManaged()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="6" severity="error" message="No summary for property $id" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="7" severity="error" message="No summary for property $name" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="8" severity="error" message="No summary for property $roles" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="9" severity="error" message="No summary for property $require_colons" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="10" severity="error" message="No summary for property $managed" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Objects\Guild.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="10" severity="error" message="No summary for class \Discord\Objects\Guild" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="42" severity="error" message="Argument $guildid is missing from the Docblock of __construct" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="42" severity="error" message="Argument $token_type is missing from the Docblock of __construct" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="42" severity="error" message="Argument $token is missing from the Docblock of __construct" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="42" severity="error" message="No summary for method __construct()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="95" severity="error" message="No summary for method getId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="98" severity="error" message="No summary for method getName()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="101" severity="error" message="No summary for method getIcon()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="104" severity="error" message="No summary for method getSplash()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="107" severity="error" message="No summary for method getOwnerId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="110" severity="error" message="No summary for method getRegion()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="113" severity="error" message="No summary for method getAfkChannelId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="116" severity="error" message="No summary for method getAfkTimeout()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="119" severity="error" message="No summary for method getEmbedEnabled()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="122" severity="error" message="No summary for method getEmbedChannelId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="129" severity="error" message="No summary for method getVertificationLevel()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="136" severity="error" message="No summary for method getDefaultMessageNotifications()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="143" severity="error" message="No summary for method getExplixitContentFilter()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="146" severity="error" message="No summary for method getRoles()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="149" severity="error" message="No summary for method getEmojis()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="152" severity="error" message="No summary for method getFeatures()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="159" severity="error" message="No summary for method getMFALevel()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="162" severity="error" message="No summary for method getApplicationId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="165" severity="error" message="No summary for method getWidgetEnabled()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="168" severity="error" message="No summary for method getWidgetChannelId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="171" severity="error" message="No summary for method getJoinedAt()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="174" severity="error" message="No summary for method getLarge()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="177" severity="error" message="No summary for method getUnavailable()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="180" severity="error" message="No summary for method getMemberCount()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="183" severity="error" message="No summary for method getVoiceStates()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="186" severity="error" message="No summary for method getMembers()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="189" severity="error" message="No summary for method getChannels()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="192" severity="error" message="No summary for method getPresences()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="12" severity="error" message="No summary for property $id" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="13" severity="error" message="No summary for property $name" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="14" severity="error" message="No summary for property $icon" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="15" severity="error" message="No summary for property $splash" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="16" severity="error" message="No summary for property $owner_id" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="17" severity="error" message="No summary for property $region" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="18" severity="error" message="No summary for property $afk_channel_id" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="19" severity="error" message="No summary for property $afk_timeout" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="20" severity="error" message="No summary for property $embed_enabled" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="21" severity="error" message="No summary for property $embed_channel_id" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="22" severity="error" message="No summary for property $verification_level" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="23" severity="error" message="No summary for property $default_message_notifications" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="24" severity="error" message="No summary for property $explicit_content_filter" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="25" severity="error" message="No summary for property $roles" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="26" severity="error" message="No summary for property $emojis" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="27" severity="error" message="No summary for property $features" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="28" severity="error" message="No summary for property $mfa_level" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="29" severity="error" message="No summary for property $application_id" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="30" severity="error" message="No summary for property $widget_enabled" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="31" severity="error" message="No summary for property $widget_channel_id" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="33" severity="error" message="No summary for property $joined_at" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="34" severity="error" message="No summary for property $large" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="35" severity="error" message="No summary for property $unavailable" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="36" severity="error" message="No summary for property $member_count" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="37" severity="error" message="No summary for property $voice_states" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="38" severity="error" message="No summary for property $members" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="39" severity="error" message="No summary for property $channels" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="40" severity="error" message="No summary for property $presences" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Discord.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="6" severity="error" message="No summary for class \Discord\Discord" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="12" severity="error" message="Argument $array is missing from the Docblock of __construct" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="12" severity="error" message="Argument $bottoken is missing from the Docblock of __construct" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="12" severity="error" message="No summary for method __construct()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="44" severity="error" message="No summary for method getGuildId()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="47" severity="error" message="No summary for method getDiscordAccessToken()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="8" severity="error" message="No summary for property $token" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="9" severity="error" message="No summary for property $apiv" source="phpDocumentor.file.PPC:ERR-50007"/>
+    <error line="10" severity="error" message="No summary for property $guildid" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+  <file name="Objects\Role\Role.php"/>
+  <file name="Objects\Role\RoleArray.php">
+    <error line="0" severity="error" message="No summary was found for this file" source="phpDocumentor.file.PPC:ERR-50000"/>
+    <error line="6" severity="error" message="No summary for class \Discord\Objects\Role\RoleArray" source="phpDocumentor.file.PPC:ERR-50005"/>
+    <error line="10" severity="error" message="Argument $data is missing from the Docblock of __construct" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="10" severity="error" message="No summary for method __construct()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="16" severity="error" message="Argument $name is missing from the Docblock of getRoleByName" source="phpDocumentor.file.PPC:ERR-50015"/>
+    <error line="16" severity="error" message="No summary for method getRoleByName()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="19" severity="error" message="No summary for method getAllRoles()" source="phpDocumentor.file.PPC:ERR-50008"/>
+    <error line="8" severity="error" message="No summary for property $allroles" source="phpDocumentor.file.PPC:ERR-50007"/>
+  </file>
+</checkstyle>
