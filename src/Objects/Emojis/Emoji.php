@@ -6,8 +6,6 @@
 namespace Discord\Objects\Emojis;
 /**
  * Emoji Object REFERENCE TO DISCORD HERE
- *
- * @todo function to return direct image url
  */
 class Emoji {
 
@@ -98,4 +96,16 @@ class Emoji {
     public function getManaged() {
         return $this->managed;
     }
+    /**
+     * Get the emoji URL
+     *
+     *  This returns the complete URL of the emoji on the discord CDN
+     *
+     * @param none
+     *
+     * @return string
+     */
+     public function getURL() {
+         return "https://cdn.discordapp.com/emojis/" . $this->id . ".png";
+     }
 }

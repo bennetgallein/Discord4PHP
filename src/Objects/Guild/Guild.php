@@ -1,43 +1,75 @@
 <?php
-namespace Discord\Objects;
-/*
-    https://discordapp.com/developers/docs/resources/guild#guild-object
-*/
+/**
+ * Guild.php
+ */
+namespace Discord\Objects\Guild;
+
 use \Discord\Objects\Role\RoleArray;
 use \Discord\Objects\Emojis\EmojisArray;
 use \Discord\Discord;
 
+/**
+ * This is the Guild object. See  https://discordapp.com/developers/docs/resources/guild#guild-object for more information.
+ */
 class Guild {
 
-    public $id; // guild id @return snowflake
-    public $name; // guild name @return string
-    public $icon; // icon hash https://discordapp.com/developers/docs/reference#image-formatting @return string
-    public $splash; // splash hash https://discordapp.com/developers/docs/reference#image-formatting @return string
-    public $owner_id; // id of owner @return snowflake
-    public $region; // voice region id @return string
-    public $afk_channel_id; // id of afk channel @return snowflake
-    public $afk_timeout; // afk timeout in seconds @return integer
-    public $embed_enabled; // is this guild embeddable @return boolean
-    public $embed_channel_id; // id of embedded channel @return snowflake
-    public $verification_level; // level of vertification required for the guild @return integer
-    public $default_message_notifications; // default message notifactin level @return integer
-    public $explicit_content_filter; // default explicit content filter level @return integer
-    public $roles; // roles in a guild @return array of roles objects
-    public $emojis; // custom guild emojis @return array of emoji objects
-    public $features; // enabled guild features @return array of strings
-    public $mfa_level; // required MFA Level for the guild @return integer
-    public $application_id; // 	application id of the guild creator if it is bot-created @return ?snowflake
-    public $widget_enabled; // whether or not the server widget is enabled @return boolean
-    public $widget_channel_id; // the channel id for the server widget @return snowflake
+    /** @var integer|null the id of the guild */
+    public $id;
+    /** @var string|null the guilds name*/
+    public $name;
+    /** @var string|null the guild's icon hash */
+    public $icon;
+    /** @var string|null the guild's splash hash */
+    public $splash;
+    /** @var integer|null the id of the guild's owner */
+    public $owner_id;
+    /** @var string|null the identifier of the voice region */
+    public $region;
+    /** @var integer|null the id of the afk channel */
+    public $afk_channel_id;
+    /** @var integer|null the amount of seconds before a user get's moved into the afk channel */
+    public $afk_timeout;
+    /** @var boolean|null if the guild is embeddable */
+    public $embed_enabled;
+    /** @var integer|null the id of the embedded channel */
+    public $embed_channel_id;
+    /** @var integer|null the vertification level needed to chat */
+    public $verification_level;
+    /** @var integer|null the default message notification level */
+    public $default_message_notifications;
+    /** @var integer|null the default explicit content filter level */
+    public $explicit_content_filter;
+    /** @var array|null an array of role objects */
+    public $roles;
+    /** @var array|null an array of emoji objects */
+    public $emojis;
+    /** @var array|null array of strings of the guild's features */
+    public $features;
+    /** @var integer|null returns the required mfa level for the guild */
+    public $mfa_level;
+    /** @var integer|null apllication of the id of the guild's creator if it is bot created */
+    public $application_id;
+    /** @var boolean|null returns the boolean wether or not the server widget is enabled */
+    public $widget_enabled;
+    /** @var integer|null return the channelid for the server widget */
+    public $widget_channel_id;
     // belows are only sent with the GUILD_CREATE Event
-    public $joined_at; // when this guild was joined at @return ISO8601 timestamp
-    public $large; // whether this is considered a large guild @return boolean
-    public $unavailable; // is this guild unavailable @return boolean
-    public $member_count; // total number of members in this guild @return integer
-    public $voice_states; // (without the guild_id key) @return array of partial voice state objects
-    public $members; // users in the guild @return array of guild member objects
-    public $channels; // channels in the guild @return array of channel objects
-    public $presences; // presences of the users in the guild @return array of partial presence update objects
+    /** @var integer|null an ISO8601 Timestamp when the guild was created */
+    public $joined_at;
+    /** @var boolean|null wether this guild is considert a large guild */
+    public $large;
+    /** @var boolean|null wether this guild is unavailable or not */
+    public $unavailable;
+    /** @var integer|null returns the total amount of members */
+    public $member_count;
+    /** @var array|null array of partical voice state objects */
+    public $voice_states;
+    /** @var array|null array of guild member objects */
+    public $members;
+    /** @var array|null array of channel objects */
+    public $channels;
+    /** @var array|null array of partical presnce update objects */
+    public $presences;
 
     public function __construct($guildid, $token_type, $token) {
 
@@ -191,5 +223,11 @@ class Guild {
     }
     public function getPresences() {
         return $this->presences;
+   }
+   public function getIconURL() {
+       return "https://cdn.discordapp.com/icons/" . $this->id . "/" . $this->icon . ".png";
+   }
+   public function getSplashURL() {
+       return "https://cdn.discordapp.com/splashes/" . $this->id ."/" . $this->splash . ".png";
    }
 }
