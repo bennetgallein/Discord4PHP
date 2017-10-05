@@ -1,0 +1,278 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+/**
+ * Guild.php
+ */
+namespace Discord\Objects\Guild;
+
+use \Discord\Objects\Role\RoleArray;
+use \Discord\Objects\Emojis\EmojisArray;
+use \Discord\Discord;
+
+/**
+ * This is the Guild object. See  https://discordapp.com/developers/docs/resources/guild#guild-object for more information.
+ */
+class Guild {
+
+    /** @var integer|null the id of the guild */
+    public $id;
+    /** @var string|null the guilds name*/
+    public $name;
+    /** @var string|null the guild's icon hash */
+    public $icon;
+    /** @var string|null the guild's splash hash */
+    public $splash;
+    /** @var integer|null the id of the guild's owner */
+    public $owner_id;
+    /** @var string|null the identifier of the voice region */
+    public $region;
+    /** @var integer|null the id of the afk channel */
+    public $afk_channel_id;
+    /** @var integer|null the amount of seconds before a user get's moved into the afk channel */
+    public $afk_timeout;
+    /** @var boolean|null if the guild is embeddable */
+    public $embed_enabled;
+    /** @var integer|null the id of the embedded channel */
+    public $embed_channel_id;
+    /** @var integer|null the vertification level needed to chat */
+    public $verification_level;
+    /** @var integer|null the default message notification level */
+    public $default_message_notifications;
+    /** @var integer|null the default explicit content filter level */
+    public $explicit_content_filter;
+    /** @var array|null an array of role objects */
+    public $roles;
+    /** @var array|null an array of emoji objects */
+    public $emojis;
+    /** @var array|null array of strings of the guild's features */
+    public $features;
+    /** @var integer|null returns the required mfa level for the guild */
+    public $mfa_level;
+    /** @var integer|null apllication of the id of the guild's creator if it is bot created */
+    public $application_id;
+    /** @var boolean|null returns the boolean wether or not the server widget is enabled */
+    public $widget_enabled;
+    /** @var integer|null return the channelid for the server widget */
+    public $widget_channel_id;
+    // belows are only sent with the GUILD_CREATE Event
+    /** @var integer|null an ISO8601 Timestamp when the guild was created */
+    public $joined_at;
+    /** @var boolean|null wether this guild is considert a large guild */
+    public $large;
+    /** @var boolean|null wether this guild is unavailable or not */
+    public $unavailable;
+    /** @var integer|null returns the total amount of members */
+    public $member_count;
+    /** @var array|null array of partical voice state objects */
+    public $voice_states;
+    /** @var array|null array of guild member objects */
+    public $members;
+    /** @var array|null array of channel objects */
+    public $channels;
+    /** @var array|null array of partical presnce update objects */
+    public $presences;
+
+    public function __construct($guildid, $token_type, $token) {
+
+        $ch = curl_init(); //
+
+        curl_setopt_array($ch, array(
+            CURLOPT_URL =&gt; &quot;http://discordapp.com/api/v&quot; . Discord::$apiv . &quot;/guilds/&quot; . $guildid,
+            CURLOPT_HTTPHEADER     =&gt; array('Authorization: ' . $token_type . ' ' . $token),
+            CURLOPT_RETURNTRANSFER =&gt; 1,
+            CURLOPT_FOLLOWLOCATION =&gt; 1,
+            CURLOPT_VERBOSE        =&gt; 1,
+            CURLOPT_SSL_VERIFYPEER =&gt; 0,
+        ));
+
+        $data = curl_exec($ch);
+        curl_close($ch);
+        $data = json_decode($data, true);
+
+        if (isset($data['code']) &amp;&amp; isset($data['message'])) {
+            echo $data['code'] . &quot;: &quot; . $data['message'];
+        } else {
+            $this-&gt;id = $data['id'];
+            $this-&gt;name = $data['name'];
+            $this-&gt;icon = $data['icon'];
+            $this-&gt;splash = $data['splash'];
+            $this-&gt;owner_id = $data['owner_id'];
+            $this-&gt;region = $data['region'];
+            $this-&gt;afk_channel_id = $data['afk_channel_id'];
+            $this-&gt;afk_timeout = $data['afk_timeout'];
+            $this-&gt;embed_enabled = $data['embed_enabled'];
+            $this-&gt;embed_channel_id = $data['embed_channel_id'];
+            $this-&gt;verification_level = $data['verification_level'];
+            $this-&gt;default_message_notifications = $data['default_message_notifications'];
+            $this-&gt;explicit_content_filter = $data['explicit_content_filter'];
+            $this-&gt;roles = new RoleArray($data['roles']);
+            $this-&gt;emojis = new EmojisArray($data['emojis']);
+            $this-&gt;features = $data['features'];
+            $this-&gt;mfa_level = $data['mfa_level'];
+            $this-&gt;application_id = $data['application_id'];
+            $this-&gt;widget_enabled = $data['widget_enabled'];
+            $this-&gt;widget_channel_id = $data['widget_channel_id'];
+            if (isset($data['joined_at'])) {
+                $this-&gt;joined_at = $data['joined_at'];
+                $this-&gt;large = $data['large'];
+                $this-&gt;unavailable = $data['unavailable'];
+                $this-&gt;member_count = $data['member_count'];
+                $this-&gt;voice_states = $data['voice_states'];
+                $this-&gt;members = $data['members'];
+                $this-&gt;channels = $data['channles'];
+                $this-&gt;presences = $data['presences'];
+            }
+        }
+    }
+
+    public function getId() {
+        return $this-&gt;id;
+    }
+    public function getName() {
+        return $this-&gt;name;
+    }
+    public function getIcon() {
+        return $this-&gt;icon;
+    }
+    public function getSplash() {
+        return $this-&gt;splash;
+    }
+    public function getOwnerId() {
+        return $this-&gt;owner_id;
+    }
+    public function getRegion() {
+        return $this-&gt;region;
+    }
+    public function getAfkChannelId() {
+        return $this-&gt;afk_channel_id;
+    }
+    public function getAfkTimeout() {
+        return $this-&gt;afk_timeout;
+    }
+    public function getEmbedEnabled() {
+        return $this-&gt;embed_enabled;
+    }
+    public function getEmbedChannelId() {
+        return $this-&gt;embed_channel_id;
+    }
+    /*
+     * @return int 0 - 4
+     * https://discordapp.com/developers/docs/resources/guild#guild-object-verification-level
+     */
+    public function getVertificationLevel() {
+        return $this-&gt;vertification_level;
+    }
+    /*
+     * @return int 0 or 1
+     * https://discordapp.com/developers/docs/resources/guild#guild-object-default-message-notification-level
+     */
+    public function getDefaultMessageNotifications() {
+        return $this-&gt;default_message_notifications;
+    }
+    /*
+     * @return int 0 - 2
+     * https://discordapp.com/developers/docs/resources/guild#guild-object-explicit-content-filter-level
+     */
+    public function getExplixitContentFilter() {
+        return $this-&gt;explicit_content_filer;
+    }
+    public function getRoles() {
+        return $this-&gt;roles;
+    }
+    public function getEmojis() {
+        return $this-&gt;emojis;
+    }
+    public function getFeatures() {
+        return $this-&gt;features;
+    }
+    /*
+     * @return int 0 or 1
+     * https://discordapp.com/developers/docs/resources/guild#guild-object-mfa-level
+     */
+    public function getMFALevel() {
+        return $this-&gt;mfa_level;
+    }
+    public function getApplicationId() {
+        return $this-&gt;application_id;
+    }
+    public function getWidgetEnabled() {
+        return $this-&gt;widget_enabled;
+    }
+    public function getWidgetChannelId() {
+        return $this-&gt;widget_channel_id;
+    }
+    public function getJoinedAt() {
+        return $this-&gt;joined_at;
+    }
+    public function getLarge() {
+        return $this-&gt;large;
+    }
+    public function getUnavailable() {
+        return $this-&gt;unavailable;
+    }
+    public function getMemberCount() {
+        return $this-&gt;member_count;
+    }
+    public function getVoiceStates() {
+        return $this-&gt;voice_states;
+    }
+    public function getMembers() {
+        return $this-&gt;members;
+    }
+    public function getChannels() {
+        return $this-&gt;channels;
+    }
+    public function getPresences() {
+        return $this-&gt;presences;
+   }
+   public function getIconURL() {
+       return &quot;https://cdn.discordapp.com/icons/&quot; . $this-&gt;id . &quot;/&quot; . $this-&gt;icon . &quot;.png&quot;;
+   }
+   public function getSplashURL() {
+       return &quot;https://cdn.discordapp.com/splashes/&quot; . $this-&gt;id .&quot;/&quot; . $this-&gt;splash . &quot;.png&quot;;
+   }
+}
+</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>
