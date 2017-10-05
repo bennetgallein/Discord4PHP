@@ -1,4 +1,40 @@
-<?php
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
 /**
  * VoiceRegion.php
  */
@@ -45,20 +81,20 @@ class VoiceRegion {
         $ch = curl_init(); //
 
         curl_setopt_array($ch, array(
-            CURLOPT_URL => "http://discordapp.com/api/v" . Discord::$apiv . "/voice/regions",
-            CURLOPT_HTTPHEADER     => array('Authorization: ' . $token_type . ' ' . $token),
-            CURLOPT_RETURNTRANSFER => 1,
-            CURLOPT_FOLLOWLOCATION => 1,
-            CURLOPT_VERBOSE        => 1,
-            CURLOPT_SSL_VERIFYPEER => 0,
+            CURLOPT_URL =&gt; &quot;http://discordapp.com/api/v&quot; . Discord::$apiv . &quot;/voice/regions&quot;,
+            CURLOPT_HTTPHEADER     =&gt; array('Authorization: ' . $token_type . ' ' . $token),
+            CURLOPT_RETURNTRANSFER =&gt; 1,
+            CURLOPT_FOLLOWLOCATION =&gt; 1,
+            CURLOPT_VERBOSE        =&gt; 1,
+            CURLOPT_SSL_VERIFYPEER =&gt; 0,
         ));
 
         $data = curl_exec($ch);
         curl_close($ch);
         $data = json_decode($data, true);
 
-        if (isset($data['code']) && isset($data['message'])) {
-            echo $data['code'] . ": " . $data['message'];
+        if (isset($data['code']) &amp;&amp; isset($data['message'])) {
+            echo $data['code'] . &quot;: &quot; . $data['message'];
         } else {
             return new VoiceRegionArray($data);
         }
@@ -73,16 +109,16 @@ class VoiceRegion {
      * @return object the new object
      */
     public function __construct($data) {
-        $this->id = $data['id'];
-        $this->name = $data['name'];
+        $this-&gt;id = $data['id'];
+        $this-&gt;name = $data['name'];
         if (isset($data['sample_hostname'])) {
-            $this->sample_hostname = $data['sample_hostname'];
-            $this->sample_port = $data['sample_port'];
+            $this-&gt;sample_hostname = $data['sample_hostname'];
+            $this-&gt;sample_port = $data['sample_port'];
         }
-        $this->vip = $data['vip'];
-        $this->optimal = $data['optimal'];
-        $this->deprecated = $data['deprecated'];
-        $this->custom = $data['custom'];
+        $this-&gt;vip = $data['vip'];
+        $this-&gt;optimal = $data['optimal'];
+        $this-&gt;deprecated = $data['deprecated'];
+        $this-&gt;custom = $data['custom'];
 
         return $this;
     }
@@ -96,7 +132,7 @@ class VoiceRegion {
      * @return string returns the id of the region
      */
     public function getId() {
-        return $this->id;
+        return $this-&gt;id;
     }
     /**
      * Get the Name of the region
@@ -108,7 +144,7 @@ class VoiceRegion {
      * @return string the name of the region
      */
     public function getName() {
-        return $this->name;
+        return $this-&gt;name;
     }
     /**
      * Get the Sample Hostname for the Region
@@ -120,7 +156,7 @@ class VoiceRegion {
      * @return string|null the sample hostname
      */
     public function getSampleHostname() {
-        return $this->sample_hostname;
+        return $this-&gt;sample_hostname;
     }
     /**
      * Get the Sample port for the Region
@@ -132,7 +168,7 @@ class VoiceRegion {
      * @return integer|null the sample port
      */
     public function getSamplePort() {
-        return $this->sample_port;
+        return $this-&gt;sample_port;
     }
     /**
      * Get if the Region is VIP only
@@ -144,7 +180,7 @@ class VoiceRegion {
      * @return boolean|null returns the boolean if the region is VIP only.
      */
     public function getVIP() {
-        return $this->vip;
+        return $this-&gt;vip;
     }
     /**
      * Get if the Region is optimal for the client
@@ -156,7 +192,7 @@ class VoiceRegion {
      * @return boolean returns the boolean if the region is optimal.
      */
     public function getOptimal() {
-        return $this->optimal;
+        return $this-&gt;optimal;
     }
     /**
      * Get if the Region is deprecated
@@ -168,7 +204,7 @@ class VoiceRegion {
      * @return boolean|null returns the boolean if the region is deprecated
      */
     public function getDeprecated() {
-        return $this->deprecated;
+        return $this-&gt;deprecated;
     }
     /**
      * Get if the Region is custom
@@ -180,6 +216,15 @@ class VoiceRegion {
      * @return boolean|null returns the boolean if the region is custom for events etc.
      */
     public function getCustom() {
-        return $this->custom;
+        return $this-&gt;custom;
     }
 }
+</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

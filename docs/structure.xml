@@ -85,7 +85,295 @@
     </class>
     <source>eJylk91u2zAMhe8N+B14EaBugKYP4P203YbdbcC2uyQoGJmJ1TmSIckpgq3vPolSGnuuiwEzDMSRyHPIj9Kb923d5tn1fJ5nMIdPe/0g7a0xeFzwBsyv80zhnmyLguCjtEKbavV180DC2VWML/MszzpLsHp5P/6UZ5sftbTgX1TAXqC30RpS4gK+E4GrabAMW22gIoeyoQqk8n/36KRWi1SoaNDafhPwK5QG/vHWcHNAA5qlfquuaSbMWSrktN2mkQJmxIIYgsueXvzotfNcb9RNRX/QyjrTCafNKWOYKQyhI08DFD3+VZOFDVrfrFasHjd38kBqpHXTosE9cJkwq9BhQownxdjHONGQ64yCg5bVaXFIYNspETjD/b04dVOwxWUgDOmZOd/O1bseLngb3YvL8hzmx0YoaogKgDYRHmi9rLeMkcuLcCQv1muvH5gxqiKp9Jye4ufTeGSfyQH6E5Ag4xnUCM83pmM5/HnCYdjoJQyB9YOlamocSiuaJD4wnEC+I3fbNNG0GCBKImNK5ettD+/U5ggB5kTbvTsYLw48Slfzash6/Sj6gyLVDmYcme4HlwlOQ6P1z3AUFv9Lh6u7O37xJgVb/RukJceuz6z8+we29HJq</source>
   </file>
-  <file path="Objects\Guild\GuildMemberArray.php" generated-path="Objects.Guild.GuildMemberArray.html" hash="2a3e80ea19e2481c6f50dc04a45619e5" package="Default">
+  <file path="Objects\Voice\VoiceRegion.php" generated-path="Objects.Voice.VoiceRegion.html" hash="07d56f3525fe31e771e0c77023bc0375" package="Default">
+    <docblock line="0">
+      <description>VoiceRegion.php</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="Discord">\Discord\Discord</namespace-alias>
+    <namespace-alias name="VoiceRegionArray">\Discord\Objects\Voice\VoiceRegionArray</namespace-alias>
+    <class final="false" abstract="false" namespace="Discord\Objects\Voice" line="14" package="Default">
+      <extends/>
+      <name>VoiceRegion</name>
+      <full_name>\Discord\Objects\Voice\VoiceRegion</full_name>
+      <docblock line="14">
+        <description>The VoiceRegion class contains all information about a Voice region.</description>
+        <long-description></long-description>
+        <tag name="see" line="14" description="" link="https://discordapp.com/developers/docs/resources/voice#voice-region"/>
+        <tag name="package" line="14" description="Default"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="Discord\Objects\Voice" line="17" package="Default">
+        <name>$id</name>
+        <full_name>\Discord\Objects\Voice\VoiceRegion::id</full_name>
+        <default></default>
+        <docblock line="17">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="17" description="&lt;p&gt;the id of the region&lt;/p&gt;" type="string|null" variable="">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="Discord\Objects\Voice" line="19" package="Default">
+        <name>$name</name>
+        <full_name>\Discord\Objects\Voice\VoiceRegion::name</full_name>
+        <default></default>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="19" description="&lt;p&gt;the name of the region&lt;/p&gt;" type="string|null" variable="">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="Discord\Objects\Voice" line="21" package="Default">
+        <name>$sample_hostname</name>
+        <full_name>\Discord\Objects\Voice\VoiceRegion::sample_hostname</full_name>
+        <default></default>
+        <docblock line="21">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="21" description="&lt;p&gt;an example hostname for the region&lt;/p&gt;" type="string|null" variable="">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="Discord\Objects\Voice" line="23" package="Default">
+        <name>$sample_port</name>
+        <full_name>\Discord\Objects\Voice\VoiceRegion::sample_port</full_name>
+        <default></default>
+        <docblock line="23">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="23" description="&lt;p&gt;an example port for the region&lt;/p&gt;" type="integer|null" variable="">
+            <type>integer</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="Discord\Objects\Voice" line="25" package="Default">
+        <name>$vip</name>
+        <full_name>\Discord\Objects\Voice\VoiceRegion::vip</full_name>
+        <default></default>
+        <docblock line="25">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="25" description="&lt;p&gt;true if this is an vip-only server&lt;/p&gt;" type="boolean|null" variable="">
+            <type>boolean</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="Discord\Objects\Voice" line="27" package="Default">
+        <name>$optimal</name>
+        <full_name>\Discord\Objects\Voice\VoiceRegion::optimal</full_name>
+        <default></default>
+        <docblock line="27">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="27" description="&lt;p&gt;true for a single server that is closest to the current user's client&lt;/p&gt;" type="boolean|null" variable="">
+            <type>boolean</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="Discord\Objects\Voice" line="29" package="Default">
+        <name>$deprecated</name>
+        <full_name>\Discord\Objects\Voice\VoiceRegion::deprecated</full_name>
+        <default></default>
+        <docblock line="29">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="29" description="&lt;p&gt;whether this is a deprecated voice region (avoid switching to these)&lt;/p&gt;" type="boolean|null" variable="">
+            <type>boolean</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="Discord\Objects\Voice" line="31" package="Default">
+        <name>$custom</name>
+        <full_name>\Discord\Objects\Voice\VoiceRegion::custom</full_name>
+        <default></default>
+        <docblock line="31">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="31" description="&lt;p&gt;whether this is a custom voice region (used for events/etc)&lt;/p&gt;" type="boolean|null" variable="">
+            <type>boolean</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Discord\Objects\Voice" line="43" package="Default">
+        <name>loadVoiceRegions</name>
+        <full_name>\Discord\Objects\Voice\VoiceRegion::loadVoiceRegions()</full_name>
+        <docblock line="43">
+          <description>Function to load all Voice regions</description>
+          <long-description>This is the static function to load all Voice Regions.</long-description>
+          <tag name="param" line="43" description="&lt;p&gt;this is the type of authentication you want to use&lt;/p&gt;" type="string" variable="$token_type">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="43" description="&lt;p&gt;you'r bots user's token&lt;/p&gt;" type="string" variable="$token">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="43" description="a new VoiceRegionArray Object" type="object">
+            <type>object</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$token_type</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$token</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Voice" line="75" package="Default">
+        <name>__construct</name>
+        <full_name>\Discord\Objects\Voice\VoiceRegion::__construct()</full_name>
+        <docblock line="75">
+          <description>The constructor for creating a VoiceRegion</description>
+          <long-description>This creates a new VoiceRegion array based on the json input</long-description>
+          <tag name="param" line="75" description="&lt;p&gt;this is the json string, containing all information about a voice region&lt;/p&gt;" type="array" variable="$data">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="75" description="the new object" type="object">
+            <type>object</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Voice" line="98" package="Default">
+        <name>getId</name>
+        <full_name>\Discord\Objects\Voice\VoiceRegion::getId()</full_name>
+        <docblock line="98">
+          <description>Get the regions ID.</description>
+          <long-description>This returns the regions unique Identifier.</long-description>
+          <tag name="param" line="98" description="" type="\Discord\Objects\Voice\none" variable="">
+            <type>\Discord\Objects\Voice\none</type>
+          </tag>
+          <tag name="return" line="98" description="returns the id of the region" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Voice" line="110" package="Default">
+        <name>getName</name>
+        <full_name>\Discord\Objects\Voice\VoiceRegion::getName()</full_name>
+        <docblock line="110">
+          <description>Get the Name of the region</description>
+          <long-description>This returns the name of the region</long-description>
+          <tag name="param" line="110" description="" type="\Discord\Objects\Voice\none" variable="">
+            <type>\Discord\Objects\Voice\none</type>
+          </tag>
+          <tag name="return" line="110" description="the name of the region" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Voice" line="122" package="Default">
+        <name>getSampleHostname</name>
+        <full_name>\Discord\Objects\Voice\VoiceRegion::getSampleHostname()</full_name>
+        <docblock line="122">
+          <description>Get the Sample Hostname for the Region</description>
+          <long-description>This returns the exmample hostname of the Region</long-description>
+          <tag name="param" line="122" description="" type="\Discord\Objects\Voice\none" variable="">
+            <type>\Discord\Objects\Voice\none</type>
+          </tag>
+          <tag name="return" line="122" description="the sample hostname" type="string|null">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Voice" line="134" package="Default">
+        <name>getSamplePort</name>
+        <full_name>\Discord\Objects\Voice\VoiceRegion::getSamplePort()</full_name>
+        <docblock line="134">
+          <description>Get the Sample port for the Region</description>
+          <long-description>This returns the exmample port of the Region</long-description>
+          <tag name="param" line="134" description="" type="\Discord\Objects\Voice\none" variable="">
+            <type>\Discord\Objects\Voice\none</type>
+          </tag>
+          <tag name="return" line="134" description="the sample port" type="integer|null">
+            <type>integer</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Voice" line="146" package="Default">
+        <name>getVIP</name>
+        <full_name>\Discord\Objects\Voice\VoiceRegion::getVIP()</full_name>
+        <docblock line="146">
+          <description>Get if the Region is VIP only</description>
+          <long-description>This returns wether the region is VIP only or nah.</long-description>
+          <tag name="param" line="146" description="" type="\Discord\Objects\Voice\none" variable="">
+            <type>\Discord\Objects\Voice\none</type>
+          </tag>
+          <tag name="return" line="146" description="returns the boolean if the region is VIP only." type="boolean|null">
+            <type>boolean</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Voice" line="158" package="Default">
+        <name>getOptimal</name>
+        <full_name>\Discord\Objects\Voice\VoiceRegion::getOptimal()</full_name>
+        <docblock line="158">
+          <description>Get if the Region is optimal for the client</description>
+          <long-description>This returns wether the region is optimal for the client</long-description>
+          <tag name="param" line="158" description="" type="\Discord\Objects\Voice\none" variable="">
+            <type>\Discord\Objects\Voice\none</type>
+          </tag>
+          <tag name="return" line="158" description="returns the boolean if the region is optimal." type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Voice" line="170" package="Default">
+        <name>getDeprecated</name>
+        <full_name>\Discord\Objects\Voice\VoiceRegion::getDeprecated()</full_name>
+        <docblock line="170">
+          <description>Get if the Region is deprecated</description>
+          <long-description>This returns wether the region is deprecated</long-description>
+          <tag name="param" line="170" description="" type="\Discord\Objects\Voice\none" variable="">
+            <type>\Discord\Objects\Voice\none</type>
+          </tag>
+          <tag name="return" line="170" description="returns the boolean if the region is deprecated" type="boolean|null">
+            <type>boolean</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Voice" line="182" package="Default">
+        <name>getCustom</name>
+        <full_name>\Discord\Objects\Voice\VoiceRegion::getCustom()</full_name>
+        <docblock line="182">
+          <description>Get if the Region is custom</description>
+          <long-description>This returns wether the region is custom (events etc.)</long-description>
+          <tag name="param" line="182" description="" type="\Discord\Objects\Voice\none" variable="">
+            <type>\Discord\Objects\Voice\none</type>
+          </tag>
+          <tag name="return" line="182" description="returns the boolean if the region is custom for events etc." type="boolean|null">
+            <type>boolean</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJy9WG1PIzcQ/o7EfxhRdCQIsu1XUq7QAwoSIijkqKpSRcZryF439p7tDdCW/97xy2a9u8kmcGpXiGTtmWdmHo/H4/z4UzbJNjei3d3NDdiFW5FQNmSPieA9OwG70eYGJ1OmMkIZnCSKChnfDe6/MKrVnZXvb25sbuSKwV0x7T/7teGK1l1g61hK8mJhCkdGExY6AzQlSgEVXJOEKyBpCgl/EHJKtJkm9yLXQJwKSBeABTpSjMFE60wdRFHsHCFZ1qNiGsVsxlKRMamiWFAVSaZELilT0czgfGf/7zs0T4XzI/Tsb+M24IOuw9GMSFBaJvzxH56jkxrjSGIQD/abg7JARiPL79OEwnZimGqFMCuwAsSItMEQDuyZTLMU6RBKW0QksA1SWfFxIV5HT7hmj0w24DMh9ZrQRrQOey9Eygj3wcscCTSBJwrwD83Mkmxf8PQFFJMzJhvQOL8a0rhHQCE76LAH0hOijQ2aCsWUBi1sBDSXknENmMpyx8wm5q1uVWQ6mZK01fLThCGgLIOBmGWSUaJZDLMgdaFD8DUG9ZRoOkEnvS+KdRuGS4g32qa50mJas4tBxpYc3Bpcq4hp2q1bdIr9IO/dF9xtZzmndkOiv6kgsd2o4aZUhehcZeQdMlQrjduZwsNyFLfpVK8Bc5QRSaY+42Fbiz8ZH+uXjM0jNgbsAO4jkuMbR1uufLyIHJ4It0uODLSCGuEdQ65WRUrY8aZHkulcchC26iHhnD1BveiBq4mFUpXpOh2GiwBAdYIw97x7XVOQwD/bzgXiy+t8mE7g0OR1Ok54ojvdPkRRsZzmsVOKaUzqsVXuoMoeuK+lmHk+fR5eDq5HY/yAw4+wZUpts9KSLIlmW9ArDpCDg20cmuHAlqu1kU+Prb3F8Oej0fX56fHJ6dAOoyXnzM4xrqSQyV92IQ9gByHDxe/hSDnWXYI+PB19Hl6NhsdXN2doAdF/WCJ5Nri8HPx6Ofh0PLoYXLVJ3p4Ofx7cnBbDLZI3N5dG+uLst+tTZ/37QLLb7YdLsx0TTYrVY8+MmqXp9mtrZ0tYfaZQ/aIEH8eMihhFzNierYlVO1hzO4nCHHAiv+8Y8Z0/uvDhA1TGsTVQ5NFMVVLPPIxOBFTUzYIfgEmEunbg5yuwFNuGGpjfTYs2kXMlDPXVfX1tVijTWGAbgVs6pxrrnKl1VDJMH9zhJIReXKmsLFPN7ewSEu6JqaCmdqEhwzQek1mul9Urp+RWJixUVtPVnb2i7bEeLml8wiq+qhLZhgKdFy2lZ15zxuM5W57mSoExPu9/xKPqsFjRJK4sppew7cZcxrxVpBrZVms9FmWXR65JlkYaEP02fdu01HXNYDU1G4Fht1Gq4cui4H1vUMr5gUWyQUcwFy/HFmn4c3wu7d6tZCnrM8Cq9Jdujl+YDpo2BRcnzYPW7gIHpyrCOU++Ymd1EZuD9SFhcukhzQVnS5PUH7ahhXoDvSJlH5m+iDuVfAnDN+m6moKrRse9molml/4tDLQjLo/deN4WfdDKt8R/43r58/pVoa02hlyw52ntsuHDWAKwPjHlrUhVLaymxgVVxNRG0uKrz2q+KnefN3Nltb+dp8rFLCDKwK9L0jXKrkFQcIFbQk4ShmOOt9uLazD3t3ZenorryvxuEqgCEszJ5H0FpnItCpfBTxQeN832VpOHom2slXfTddkqzo4ip9z18x3crQn0BgbXI8/bXYO7gZNs4696y16Xw/L8fAdvLcr/TbY1DS6n7GQu28Za4yeCdYlzrcQ7SPM9Scf9igBM0173f6LPmy5/w7DWV1P5yeq10Tj/3cNTiH//AsiMLWo=</source>
+  </file>
+  <file path="Objects\Guild\GuildMemberArray.php" generated-path="Objects.Guild.GuildMemberArray.html" hash="44f17f06f73227e42e2e673b9d37572a" package="Default">
     <docblock line="0">
       <description>GuildMemberArray.php</description>
       <long-description></long-description>
@@ -134,6 +422,26 @@
           <type>array</type>
         </argument>
       </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="42" package="Default">
+        <name>getMemberByName</name>
+        <full_name>\Discord\Objects\Guild\GuildMemberArray::getMemberByName()</full_name>
+        <docblock line="42">
+          <description>Get a GuildMember Onject by his name</description>
+          <long-description>This returns the GuildMember object of the user with the nick given</long-description>
+          <tag name="param" line="42" description="&lt;p&gt;is the nick to look for&lt;/p&gt;" type="string" variable="$name">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="42" description="" type="object|null">
+            <type>object</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$name</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
     </class>
     <markers>
       <todo line="13">make the key the id of the user object</todo>
@@ -141,7 +449,7 @@
     <parse_markers>
       <error line="13" code="PPC:ERR-50005">No summary for class \Discord\Objects\Guild\GuildMemberArray</error>
     </parse_markers>
-    <source>eJx1UdtqwjAYvi/0Hf6LglrYfIDuoGywq7Gb3VmRNP3VaJuUHByy7d2XQ4utdSGQ0Hyn/+vDc7Nv4miepnEEKbwZVpXvWBcol1KS871/hXQeR5zUqBpCEV6ZokKW+UdxQKpV7klZHMWRUQj5zee8p5xd/D73CEwB4UCcHYhtiAABCSJotBE8DxZalAJqckTQln7Esz9Z6djuZlN0TE+jFVFqNBp8O0Gwy4ueiAwZfripqqs4wzRe1BEbU1SMQrJzmNpjVNZTDRc/ph3SbpdulCP0BC+CKy0N1UJ2vCGfSiQabVnA8QuWNwIqKIhC2wP3TgGyYyfkI8VFQySp2zGTkmhy/R+wFgemxkSJ2kgOJ8HK7uOwjq3hVDObYbOh3UxTbzFznUO7Em2HunvqdwePwX46yy64rbBz0z0ECSAKkgAfqP2juGqxqwln9DhZr62Fa69X2rST63n+hqs97P4DC7vvjQ==</source>
+    <source>eJx9U8tuwjAQvEfKP+whEg+p5QPoA9pKnFouvQFCjrOAIbEj2wGhln+vH4lISGgUKSbZmZ2dWZ5e810eBqPhMAxgCLOCpcknZjHKqZTk/Oi+wnAUBpxkqHJCET6YokImy3m8R6rV0oHGYRAGhUJYdn5e1pjH137fOwSmgHAgth2IjZcAvhKE5yglOBxMtEgEZOSAoA38gGf3ZIlF25NRUSEdjKZEqdZo8GMJwVyO9Eik1/DLizS9kdNU40gtMC/ilFGItrYmczVqXGP1BzemGdLcVl1Lh/cJ3gVXWhZUC1nhmngqkWg0ZgHHE0w7BCqIiULjA3edfMmWHZG3GCc5kSQrx4wSosltDpiJPVNtoERdSA5HwZLqZdOOTcGpZkbDek2rmfquxcB6DuUVaTPUw0vdO3j27fuD8bVuI8zcdAeeAoiCyJc32O4wLsraRY8zeuitVqaFda9mWr+iq/W8+OOlneQMtQmgvhRz7uKLz2BDsv+S7vi8b60dqBa1vrsnpnfulxX9f4DGXsa3ENm+1YY5lBaQCnGw9t3N0Ld2C38TZSvLLWqv9+38ZVr1XcNmAiVpZwq2elUZbGw19x+pJ1NF</source>
   </file>
   <file path="Objects\Emojis\Emoji.php" generated-path="Objects.Emojis.Emoji.html" hash="79ca867ed4607b3bbceb308989891e7e" package="Default">
     <docblock line="0">
@@ -329,7 +637,7 @@
     </class>
     <source>eJy1Vttu2zAMfQ+QfyCCAr0Ac96bXTok2RZga4Gswx7WoVBsNlZhS64kNyi6/fuoSxo7dpyu2Aw/KDR5SB5SZF6/K9Ki3xuenPR7cALTXN7yyInASYb9nmA56oLFCBOuY6mSq4vFLcZGXzltPdoyB/8Z5tMP0/n0fDyFywuYzL6OL+YT+ESigBtnTOtg8tjvkZQeQoKze6aAC4NLVL9EmWVwmSLMJiBvwNAJnYmFsBZFuch4DAc8GW1BaKO4WG4QzimRbgyb6jYKU4o9eJD39mgRlMyQJ4caVqnMSQPpwA1mXBtMwEgoNQI3DXxrp7cdLCRJmfAuvqdI4SmKkesQZF5qAwtyoVhREDwXEMtMCt2Ex7uSK7z2nzv9rJp+6JAzwZbkYvEATPgSKGa4FA1XQXNUqZs/UBdcWkx6Lc+1jhhTVEaVsZFqrVw3ihUygxoYCFzVbRdMU2AUiUV1NYElv0cRNZDOCqZYHnQOnnJjQULlo9y8WPpGbsFQaEol4F7yZC2sM3BTitgxc010h7SOvLdj284QngPL8Ku3PIE3IZgfh9Q6P0cNFdt8FSX7s03N9VBFz/1uVax1Q9Wi9qHNdN0HG5sgeVL+3Sz7RzSVks8mDVLnjlPfF6Xgd6W71DdSbcx2FVNIgTuLFEbFnjot0cySo1ptgv1TiZ6ZmwZbm870RGXUvDwxP8D252UHW1dmlbHWkZtvLJMysz3R2i+rCvnSbWLVwQhhMvI4dUAsy+RqPRQ382bnxe2kxHnaz8jc5nJ0vJOR6iDuoCSMTODVpRGujw5TeA857RgCMdGWk8pQH5wOXkRJcPAMUnzgYxd2V7+07pG/pWmzTroY2kVQ1zL6vyx98W67+Nksvz3E+Fy+zT83wqp3idWNZV5kaNCq1/+lhKWX+H9fMJ6c/7tp0sYABVDPfp3+IDWm0KfDYZyIKIRD7RtR6EMXqh4OIKqsvAgGUSGWg/WGIaro/QM/Y+tj</source>
   </file>
-  <file path="Objects\Guild\Guild.php" generated-path="Objects.Guild.Guild.html" hash="227a83b478ef61fc94c63a9a3b9c4a5c" package="Default">
+  <file path="Objects\Guild\Guild.php" generated-path="Objects.Guild.Guild.html" hash="6ce9d2b34e296e0b6d90f65ebdc88b45" package="Default">
     <docblock line="0">
       <description>Guild.php</description>
       <long-description></long-description>
@@ -337,384 +645,420 @@
     </docblock>
     <namespace-alias name="RoleArray">\Discord\Objects\Role\RoleArray</namespace-alias>
     <namespace-alias name="EmojisArray">\Discord\Objects\Emojis\EmojisArray</namespace-alias>
+    <namespace-alias name="GuildMemberArray">\Discord\Objects\Guild\GuildMemberArray</namespace-alias>
     <namespace-alias name="Discord">\Discord\Discord</namespace-alias>
-    <class final="false" abstract="false" namespace="Discord\Objects\Guild" line="14" package="Default">
+    <class final="false" abstract="false" namespace="Discord\Objects\Guild" line="15" package="Default">
       <extends/>
       <name>Guild</name>
       <full_name>\Discord\Objects\Guild\Guild</full_name>
-      <docblock line="14">
+      <docblock line="15">
         <description>This is the Guild object. See  https://discordapp.com/developers/docs/resources/guild#guild-object for more information.</description>
         <long-description></long-description>
-        <tag name="package" line="14" description="Default"/>
+        <tag name="package" line="15" description="Default"/>
       </docblock>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="17" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="18" package="Default">
         <name>$id</name>
         <full_name>\Discord\Objects\Guild\Guild::id</full_name>
         <default></default>
-        <docblock line="17">
+        <docblock line="18">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="17" description="&lt;p&gt;the id of the guild&lt;/p&gt;" type="integer|null" variable="">
+          <tag name="var" line="18" description="&lt;p&gt;the id of the guild&lt;/p&gt;" type="integer|null" variable="">
             <type>integer</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="19" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="20" package="Default">
         <name>$name</name>
         <full_name>\Discord\Objects\Guild\Guild::name</full_name>
         <default></default>
-        <docblock line="19">
+        <docblock line="20">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="19" description="&lt;p&gt;the guilds name&lt;/p&gt;" type="string|null" variable="">
+          <tag name="var" line="20" description="&lt;p&gt;the guilds name&lt;/p&gt;" type="string|null" variable="">
             <type>string</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="21" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="22" package="Default">
         <name>$icon</name>
         <full_name>\Discord\Objects\Guild\Guild::icon</full_name>
         <default></default>
-        <docblock line="21">
+        <docblock line="22">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="21" description="&lt;p&gt;the guild's icon hash&lt;/p&gt;" type="string|null" variable="">
+          <tag name="var" line="22" description="&lt;p&gt;the guild's icon hash&lt;/p&gt;" type="string|null" variable="">
             <type>string</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="23" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="24" package="Default">
         <name>$splash</name>
         <full_name>\Discord\Objects\Guild\Guild::splash</full_name>
         <default></default>
-        <docblock line="23">
+        <docblock line="24">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="23" description="&lt;p&gt;the guild's splash hash&lt;/p&gt;" type="string|null" variable="">
+          <tag name="var" line="24" description="&lt;p&gt;the guild's splash hash&lt;/p&gt;" type="string|null" variable="">
             <type>string</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="25" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="26" package="Default">
         <name>$owner_id</name>
         <full_name>\Discord\Objects\Guild\Guild::owner_id</full_name>
         <default></default>
-        <docblock line="25">
+        <docblock line="26">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="25" description="&lt;p&gt;the id of the guild's owner&lt;/p&gt;" type="integer|null" variable="">
+          <tag name="var" line="26" description="&lt;p&gt;the id of the guild's owner&lt;/p&gt;" type="integer|null" variable="">
             <type>integer</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="27" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="28" package="Default">
         <name>$region</name>
         <full_name>\Discord\Objects\Guild\Guild::region</full_name>
         <default></default>
-        <docblock line="27">
+        <docblock line="28">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="27" description="&lt;p&gt;the identifier of the voice region&lt;/p&gt;" type="string|null" variable="">
+          <tag name="var" line="28" description="&lt;p&gt;the identifier of the voice region&lt;/p&gt;" type="string|null" variable="">
             <type>string</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="29" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="30" package="Default">
         <name>$afk_channel_id</name>
         <full_name>\Discord\Objects\Guild\Guild::afk_channel_id</full_name>
         <default></default>
-        <docblock line="29">
+        <docblock line="30">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="29" description="&lt;p&gt;the id of the afk channel&lt;/p&gt;" type="integer|null" variable="">
+          <tag name="var" line="30" description="&lt;p&gt;the id of the afk channel&lt;/p&gt;" type="integer|null" variable="">
             <type>integer</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="31" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="32" package="Default">
         <name>$afk_timeout</name>
         <full_name>\Discord\Objects\Guild\Guild::afk_timeout</full_name>
         <default></default>
-        <docblock line="31">
+        <docblock line="32">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="31" description="&lt;p&gt;the amount of seconds before a user get's moved into the afk channel&lt;/p&gt;" type="integer|null" variable="">
+          <tag name="var" line="32" description="&lt;p&gt;the amount of seconds before a user get's moved into the afk channel&lt;/p&gt;" type="integer|null" variable="">
             <type>integer</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="33" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="34" package="Default">
         <name>$embed_enabled</name>
         <full_name>\Discord\Objects\Guild\Guild::embed_enabled</full_name>
         <default></default>
-        <docblock line="33">
+        <docblock line="34">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="33" description="&lt;p&gt;if the guild is embeddable&lt;/p&gt;" type="boolean|null" variable="">
+          <tag name="var" line="34" description="&lt;p&gt;if the guild is embeddable&lt;/p&gt;" type="boolean|null" variable="">
             <type>boolean</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="35" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="36" package="Default">
         <name>$embed_channel_id</name>
         <full_name>\Discord\Objects\Guild\Guild::embed_channel_id</full_name>
         <default></default>
-        <docblock line="35">
+        <docblock line="36">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="35" description="&lt;p&gt;the id of the embedded channel&lt;/p&gt;" type="integer|null" variable="">
+          <tag name="var" line="36" description="&lt;p&gt;the id of the embedded channel&lt;/p&gt;" type="integer|null" variable="">
             <type>integer</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="37" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="38" package="Default">
         <name>$verification_level</name>
         <full_name>\Discord\Objects\Guild\Guild::verification_level</full_name>
         <default></default>
-        <docblock line="37">
+        <docblock line="38">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="37" description="&lt;p&gt;the vertification level needed to chat&lt;/p&gt;" type="integer|null" variable="">
+          <tag name="var" line="38" description="&lt;p&gt;the vertification level needed to chat&lt;/p&gt;" type="integer|null" variable="">
             <type>integer</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="39" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="40" package="Default">
         <name>$default_message_notifications</name>
         <full_name>\Discord\Objects\Guild\Guild::default_message_notifications</full_name>
         <default></default>
-        <docblock line="39">
+        <docblock line="40">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="39" description="&lt;p&gt;the default message notification level&lt;/p&gt;" type="integer|null" variable="">
+          <tag name="var" line="40" description="&lt;p&gt;the default message notification level&lt;/p&gt;" type="integer|null" variable="">
             <type>integer</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="41" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="42" package="Default">
         <name>$explicit_content_filter</name>
         <full_name>\Discord\Objects\Guild\Guild::explicit_content_filter</full_name>
         <default></default>
-        <docblock line="41">
+        <docblock line="42">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="41" description="&lt;p&gt;the default explicit content filter level&lt;/p&gt;" type="integer|null" variable="">
+          <tag name="var" line="42" description="&lt;p&gt;the default explicit content filter level&lt;/p&gt;" type="integer|null" variable="">
             <type>integer</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="43" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="44" package="Default">
         <name>$roles</name>
         <full_name>\Discord\Objects\Guild\Guild::roles</full_name>
         <default></default>
-        <docblock line="43">
+        <docblock line="44">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="43" description="&lt;p&gt;an array of role objects&lt;/p&gt;" type="array|null" variable="">
+          <tag name="var" line="44" description="&lt;p&gt;an array of role objects&lt;/p&gt;" type="array|null" variable="">
             <type>array</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="45" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="46" package="Default">
         <name>$emojis</name>
         <full_name>\Discord\Objects\Guild\Guild::emojis</full_name>
         <default></default>
-        <docblock line="45">
+        <docblock line="46">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="45" description="&lt;p&gt;an array of emoji objects&lt;/p&gt;" type="array|null" variable="">
+          <tag name="var" line="46" description="&lt;p&gt;an array of emoji objects&lt;/p&gt;" type="array|null" variable="">
             <type>array</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="47" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="48" package="Default">
         <name>$features</name>
         <full_name>\Discord\Objects\Guild\Guild::features</full_name>
         <default></default>
-        <docblock line="47">
+        <docblock line="48">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="47" description="&lt;p&gt;array of strings of the guild's features&lt;/p&gt;" type="array|null" variable="">
+          <tag name="var" line="48" description="&lt;p&gt;array of strings of the guild's features&lt;/p&gt;" type="array|null" variable="">
             <type>array</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="49" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="50" package="Default">
         <name>$mfa_level</name>
         <full_name>\Discord\Objects\Guild\Guild::mfa_level</full_name>
         <default></default>
-        <docblock line="49">
+        <docblock line="50">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="49" description="&lt;p&gt;returns the required mfa level for the guild&lt;/p&gt;" type="integer|null" variable="">
+          <tag name="var" line="50" description="&lt;p&gt;returns the required mfa level for the guild&lt;/p&gt;" type="integer|null" variable="">
             <type>integer</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="51" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="52" package="Default">
         <name>$application_id</name>
         <full_name>\Discord\Objects\Guild\Guild::application_id</full_name>
         <default></default>
-        <docblock line="51">
+        <docblock line="52">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="51" description="&lt;p&gt;apllication of the id of the guild's creator if it is bot created&lt;/p&gt;" type="integer|null" variable="">
+          <tag name="var" line="52" description="&lt;p&gt;apllication of the id of the guild's creator if it is bot created&lt;/p&gt;" type="integer|null" variable="">
             <type>integer</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="53" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="54" package="Default">
         <name>$widget_enabled</name>
         <full_name>\Discord\Objects\Guild\Guild::widget_enabled</full_name>
         <default></default>
-        <docblock line="53">
+        <docblock line="54">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="53" description="&lt;p&gt;returns the boolean wether or not the server widget is enabled&lt;/p&gt;" type="boolean|null" variable="">
+          <tag name="var" line="54" description="&lt;p&gt;returns the boolean wether or not the server widget is enabled&lt;/p&gt;" type="boolean|null" variable="">
             <type>boolean</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="55" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="56" package="Default">
         <name>$widget_channel_id</name>
         <full_name>\Discord\Objects\Guild\Guild::widget_channel_id</full_name>
         <default></default>
-        <docblock line="55">
+        <docblock line="56">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="55" description="&lt;p&gt;return the channelid for the server widget&lt;/p&gt;" type="integer|null" variable="">
+          <tag name="var" line="56" description="&lt;p&gt;return the channelid for the server widget&lt;/p&gt;" type="integer|null" variable="">
             <type>integer</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="58" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="59" package="Default">
         <name>$joined_at</name>
         <full_name>\Discord\Objects\Guild\Guild::joined_at</full_name>
         <default></default>
-        <docblock line="58">
+        <docblock line="59">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="58" description="&lt;p&gt;an ISO8601 Timestamp when the guild was created&lt;/p&gt;" type="integer|null" variable="">
+          <tag name="var" line="59" description="&lt;p&gt;an ISO8601 Timestamp when the guild was created&lt;/p&gt;" type="integer|null" variable="">
             <type>integer</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="60" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="61" package="Default">
         <name>$large</name>
         <full_name>\Discord\Objects\Guild\Guild::large</full_name>
         <default></default>
-        <docblock line="60">
+        <docblock line="61">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="60" description="&lt;p&gt;wether this guild is considert a large guild&lt;/p&gt;" type="boolean|null" variable="">
+          <tag name="var" line="61" description="&lt;p&gt;wether this guild is considert a large guild&lt;/p&gt;" type="boolean|null" variable="">
             <type>boolean</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="62" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="63" package="Default">
         <name>$unavailable</name>
         <full_name>\Discord\Objects\Guild\Guild::unavailable</full_name>
         <default></default>
-        <docblock line="62">
+        <docblock line="63">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="62" description="&lt;p&gt;wether this guild is unavailable or not&lt;/p&gt;" type="boolean|null" variable="">
+          <tag name="var" line="63" description="&lt;p&gt;wether this guild is unavailable or not&lt;/p&gt;" type="boolean|null" variable="">
             <type>boolean</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="64" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="65" package="Default">
         <name>$member_count</name>
         <full_name>\Discord\Objects\Guild\Guild::member_count</full_name>
         <default></default>
-        <docblock line="64">
+        <docblock line="65">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="64" description="&lt;p&gt;returns the total amount of members&lt;/p&gt;" type="integer|null" variable="">
+          <tag name="var" line="65" description="&lt;p&gt;returns the total amount of members&lt;/p&gt;" type="integer|null" variable="">
             <type>integer</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="66" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="67" package="Default">
         <name>$voice_states</name>
         <full_name>\Discord\Objects\Guild\Guild::voice_states</full_name>
         <default></default>
-        <docblock line="66">
+        <docblock line="67">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="66" description="&lt;p&gt;array of partical voice state objects&lt;/p&gt;" type="array|null" variable="">
+          <tag name="var" line="67" description="&lt;p&gt;array of partical voice state objects&lt;/p&gt;" type="array|null" variable="">
             <type>array</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="68" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="69" package="Default">
         <name>$members</name>
         <full_name>\Discord\Objects\Guild\Guild::members</full_name>
         <default></default>
-        <docblock line="68">
+        <docblock line="69">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="68" description="&lt;p&gt;array of guild member objects&lt;/p&gt;" type="array|null" variable="">
+          <tag name="var" line="69" description="&lt;p&gt;array of guild member objects&lt;/p&gt;" type="array|null" variable="">
             <type>array</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="70" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="71" package="Default">
         <name>$channels</name>
         <full_name>\Discord\Objects\Guild\Guild::channels</full_name>
         <default></default>
-        <docblock line="70">
+        <docblock line="71">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="70" description="&lt;p&gt;array of channel objects&lt;/p&gt;" type="array|null" variable="">
+          <tag name="var" line="71" description="&lt;p&gt;array of channel objects&lt;/p&gt;" type="array|null" variable="">
             <type>array</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="72" package="Default">
+      <property static="false" visibility="public" namespace="Discord\Objects\Guild" line="73" package="Default">
         <name>$presences</name>
         <full_name>\Discord\Objects\Guild\Guild::presences</full_name>
         <default></default>
-        <docblock line="72">
+        <docblock line="73">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="72" description="&lt;p&gt;array of partical presnce update objects&lt;/p&gt;" type="array|null" variable="">
+          <tag name="var" line="73" description="&lt;p&gt;array of partical presnce update objects&lt;/p&gt;" type="array|null" variable="">
             <type>array</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="74" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Discord\Objects\Guild" line="87" package="Default">
+        <name>createGuild</name>
+        <full_name>\Discord\Objects\Guild\Guild::createGuild()</full_name>
+        <docblock line="87">
+          <description>Create a new Guild</description>
+          <long-description>This is a static function to create a new guild.</long-description>
+          <tag name="param" line="87" description="&lt;p&gt;an array of options &lt;a href=&quot;https://discordapp.com/developers/docs/resources/guild#create-guild&quot;&gt;https://discordapp.com/developers/docs/resources/guild#create-guild&lt;/a&gt;&lt;/p&gt;" type="array" variable="$options">
+            <type>array</type>
+          </tag>
+          <tag name="param" line="87" description="&lt;p&gt;the type of the token&lt;/p&gt;" type="string" variable="$token_type">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="87" description="&lt;p&gt;the bot's token.&lt;/p&gt;" type="string" variable="$token">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="87" description="returns a Guild object on success, &quot;failed&quot; on failure." type="object">
+            <type>object</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$options</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$token_type</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$token</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="108" package="Default">
         <name>__construct</name>
         <full_name>\Discord\Objects\Guild\Guild::__construct()</full_name>
-        <docblock line="74">
+        <docblock line="108">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -734,286 +1078,356 @@
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="127" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="163" package="Default">
         <name>getId</name>
         <full_name>\Discord\Objects\Guild\Guild::getId()</full_name>
-        <docblock line="127">
+        <docblock line="163">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="130" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="166" package="Default">
         <name>getName</name>
         <full_name>\Discord\Objects\Guild\Guild::getName()</full_name>
-        <docblock line="130">
+        <docblock line="166">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="133" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="169" package="Default">
         <name>getIcon</name>
         <full_name>\Discord\Objects\Guild\Guild::getIcon()</full_name>
-        <docblock line="133">
+        <docblock line="169">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="136" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="172" package="Default">
         <name>getSplash</name>
         <full_name>\Discord\Objects\Guild\Guild::getSplash()</full_name>
-        <docblock line="136">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="139" package="Default">
-        <name>getOwnerId</name>
-        <full_name>\Discord\Objects\Guild\Guild::getOwnerId()</full_name>
-        <docblock line="139">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="142" package="Default">
-        <name>getRegion</name>
-        <full_name>\Discord\Objects\Guild\Guild::getRegion()</full_name>
-        <docblock line="142">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="145" package="Default">
-        <name>getAfkChannelId</name>
-        <full_name>\Discord\Objects\Guild\Guild::getAfkChannelId()</full_name>
-        <docblock line="145">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="148" package="Default">
-        <name>getAfkTimeout</name>
-        <full_name>\Discord\Objects\Guild\Guild::getAfkTimeout()</full_name>
-        <docblock line="148">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="151" package="Default">
-        <name>getEmbedEnabled</name>
-        <full_name>\Discord\Objects\Guild\Guild::getEmbedEnabled()</full_name>
-        <docblock line="151">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="154" package="Default">
-        <name>getEmbedChannelId</name>
-        <full_name>\Discord\Objects\Guild\Guild::getEmbedChannelId()</full_name>
-        <docblock line="154">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="161" package="Default">
-        <name>getVertificationLevel</name>
-        <full_name>\Discord\Objects\Guild\Guild::getVertificationLevel()</full_name>
-        <docblock line="161">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="168" package="Default">
-        <name>getDefaultMessageNotifications</name>
-        <full_name>\Discord\Objects\Guild\Guild::getDefaultMessageNotifications()</full_name>
-        <docblock line="168">
+        <docblock line="172">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="175" package="Default">
-        <name>getExplixitContentFilter</name>
-        <full_name>\Discord\Objects\Guild\Guild::getExplixitContentFilter()</full_name>
+        <name>getOwnerId</name>
+        <full_name>\Discord\Objects\Guild\Guild::getOwnerId()</full_name>
         <docblock line="175">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="178" package="Default">
-        <name>getRoles</name>
-        <full_name>\Discord\Objects\Guild\Guild::getRoles()</full_name>
+        <name>getRegion</name>
+        <full_name>\Discord\Objects\Guild\Guild::getRegion()</full_name>
         <docblock line="178">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="181" package="Default">
-        <name>getEmojis</name>
-        <full_name>\Discord\Objects\Guild\Guild::getEmojis()</full_name>
+        <name>getAfkChannelId</name>
+        <full_name>\Discord\Objects\Guild\Guild::getAfkChannelId()</full_name>
         <docblock line="181">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="184" package="Default">
-        <name>getFeatures</name>
-        <full_name>\Discord\Objects\Guild\Guild::getFeatures()</full_name>
+        <name>getAfkTimeout</name>
+        <full_name>\Discord\Objects\Guild\Guild::getAfkTimeout()</full_name>
         <docblock line="184">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="191" package="Default">
-        <name>getMFALevel</name>
-        <full_name>\Discord\Objects\Guild\Guild::getMFALevel()</full_name>
-        <docblock line="191">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="187" package="Default">
+        <name>getEmbedEnabled</name>
+        <full_name>\Discord\Objects\Guild\Guild::getEmbedEnabled()</full_name>
+        <docblock line="187">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="194" package="Default">
-        <name>getApplicationId</name>
-        <full_name>\Discord\Objects\Guild\Guild::getApplicationId()</full_name>
-        <docblock line="194">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="190" package="Default">
+        <name>getEmbedChannelId</name>
+        <full_name>\Discord\Objects\Guild\Guild::getEmbedChannelId()</full_name>
+        <docblock line="190">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="197" package="Default">
-        <name>getWidgetEnabled</name>
-        <full_name>\Discord\Objects\Guild\Guild::getWidgetEnabled()</full_name>
+        <name>getVertificationLevel</name>
+        <full_name>\Discord\Objects\Guild\Guild::getVertificationLevel()</full_name>
         <docblock line="197">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="200" package="Default">
-        <name>getWidgetChannelId</name>
-        <full_name>\Discord\Objects\Guild\Guild::getWidgetChannelId()</full_name>
-        <docblock line="200">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="204" package="Default">
+        <name>getDefaultMessageNotifications</name>
+        <full_name>\Discord\Objects\Guild\Guild::getDefaultMessageNotifications()</full_name>
+        <docblock line="204">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="203" package="Default">
-        <name>getJoinedAt</name>
-        <full_name>\Discord\Objects\Guild\Guild::getJoinedAt()</full_name>
-        <docblock line="203">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="211" package="Default">
+        <name>getExplixitContentFilter</name>
+        <full_name>\Discord\Objects\Guild\Guild::getExplixitContentFilter()</full_name>
+        <docblock line="211">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="206" package="Default">
-        <name>getLarge</name>
-        <full_name>\Discord\Objects\Guild\Guild::getLarge()</full_name>
-        <docblock line="206">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="214" package="Default">
+        <name>getRoles</name>
+        <full_name>\Discord\Objects\Guild\Guild::getRoles()</full_name>
+        <docblock line="214">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="209" package="Default">
-        <name>getUnavailable</name>
-        <full_name>\Discord\Objects\Guild\Guild::getUnavailable()</full_name>
-        <docblock line="209">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="217" package="Default">
+        <name>getEmojis</name>
+        <full_name>\Discord\Objects\Guild\Guild::getEmojis()</full_name>
+        <docblock line="217">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="212" package="Default">
-        <name>getMemberCount</name>
-        <full_name>\Discord\Objects\Guild\Guild::getMemberCount()</full_name>
-        <docblock line="212">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="215" package="Default">
-        <name>getVoiceStates</name>
-        <full_name>\Discord\Objects\Guild\Guild::getVoiceStates()</full_name>
-        <docblock line="215">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="218" package="Default">
-        <name>getMembers</name>
-        <full_name>\Discord\Objects\Guild\Guild::getMembers()</full_name>
-        <docblock line="218">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="221" package="Default">
-        <name>getChannels</name>
-        <full_name>\Discord\Objects\Guild\Guild::getChannels()</full_name>
-        <docblock line="221">
-          <description></description>
-          <long-description></long-description>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="224" package="Default">
-        <name>getPresences</name>
-        <full_name>\Discord\Objects\Guild\Guild::getPresences()</full_name>
-        <docblock line="224">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="220" package="Default">
+        <name>getFeatures</name>
+        <full_name>\Discord\Objects\Guild\Guild::getFeatures()</full_name>
+        <docblock line="220">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="227" package="Default">
-        <name>getIconURL</name>
-        <full_name>\Discord\Objects\Guild\Guild::getIconURL()</full_name>
+        <name>getMFALevel</name>
+        <full_name>\Discord\Objects\Guild\Guild::getMFALevel()</full_name>
         <docblock line="227">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="230" package="Default">
+        <name>getApplicationId</name>
+        <full_name>\Discord\Objects\Guild\Guild::getApplicationId()</full_name>
+        <docblock line="230">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="233" package="Default">
+        <name>getWidgetEnabled</name>
+        <full_name>\Discord\Objects\Guild\Guild::getWidgetEnabled()</full_name>
+        <docblock line="233">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="236" package="Default">
+        <name>getWidgetChannelId</name>
+        <full_name>\Discord\Objects\Guild\Guild::getWidgetChannelId()</full_name>
+        <docblock line="236">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="239" package="Default">
+        <name>getJoinedAt</name>
+        <full_name>\Discord\Objects\Guild\Guild::getJoinedAt()</full_name>
+        <docblock line="239">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="242" package="Default">
+        <name>getLarge</name>
+        <full_name>\Discord\Objects\Guild\Guild::getLarge()</full_name>
+        <docblock line="242">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="245" package="Default">
+        <name>getUnavailable</name>
+        <full_name>\Discord\Objects\Guild\Guild::getUnavailable()</full_name>
+        <docblock line="245">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="248" package="Default">
+        <name>getMemberCount</name>
+        <full_name>\Discord\Objects\Guild\Guild::getMemberCount()</full_name>
+        <docblock line="248">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="251" package="Default">
+        <name>getVoiceStates</name>
+        <full_name>\Discord\Objects\Guild\Guild::getVoiceStates()</full_name>
+        <docblock line="251">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="254" package="Default">
+        <name>getMembers</name>
+        <full_name>\Discord\Objects\Guild\Guild::getMembers()</full_name>
+        <docblock line="254">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="257" package="Default">
+        <name>getChannels</name>
+        <full_name>\Discord\Objects\Guild\Guild::getChannels()</full_name>
+        <docblock line="257">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="260" package="Default">
+        <name>getPresences</name>
+        <full_name>\Discord\Objects\Guild\Guild::getPresences()</full_name>
+        <docblock line="260">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="263" package="Default">
+        <name>getIconURL</name>
+        <full_name>\Discord\Objects\Guild\Guild::getIconURL()</full_name>
+        <docblock line="263">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Guild" line="266" package="Default">
         <name>getSplashURL</name>
         <full_name>\Discord\Objects\Guild\Guild::getSplashURL()</full_name>
-        <docblock line="230">
+        <docblock line="266">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
     </class>
     <parse_markers>
-      <error line="74" code="PPC:ERR-50015">Argument $guildid is missing from the Docblock of __construct</error>
-      <error line="74" code="PPC:ERR-50015">Argument $token_type is missing from the Docblock of __construct</error>
-      <error line="74" code="PPC:ERR-50015">Argument $token is missing from the Docblock of __construct</error>
-      <error line="74" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="127" code="PPC:ERR-50008">No summary for method getId()</error>
-      <error line="130" code="PPC:ERR-50008">No summary for method getName()</error>
-      <error line="133" code="PPC:ERR-50008">No summary for method getIcon()</error>
-      <error line="136" code="PPC:ERR-50008">No summary for method getSplash()</error>
-      <error line="139" code="PPC:ERR-50008">No summary for method getOwnerId()</error>
-      <error line="142" code="PPC:ERR-50008">No summary for method getRegion()</error>
-      <error line="145" code="PPC:ERR-50008">No summary for method getAfkChannelId()</error>
-      <error line="148" code="PPC:ERR-50008">No summary for method getAfkTimeout()</error>
-      <error line="151" code="PPC:ERR-50008">No summary for method getEmbedEnabled()</error>
-      <error line="154" code="PPC:ERR-50008">No summary for method getEmbedChannelId()</error>
-      <error line="161" code="PPC:ERR-50008">No summary for method getVertificationLevel()</error>
-      <error line="168" code="PPC:ERR-50008">No summary for method getDefaultMessageNotifications()</error>
-      <error line="175" code="PPC:ERR-50008">No summary for method getExplixitContentFilter()</error>
-      <error line="178" code="PPC:ERR-50008">No summary for method getRoles()</error>
-      <error line="181" code="PPC:ERR-50008">No summary for method getEmojis()</error>
-      <error line="184" code="PPC:ERR-50008">No summary for method getFeatures()</error>
-      <error line="191" code="PPC:ERR-50008">No summary for method getMFALevel()</error>
-      <error line="194" code="PPC:ERR-50008">No summary for method getApplicationId()</error>
-      <error line="197" code="PPC:ERR-50008">No summary for method getWidgetEnabled()</error>
-      <error line="200" code="PPC:ERR-50008">No summary for method getWidgetChannelId()</error>
-      <error line="203" code="PPC:ERR-50008">No summary for method getJoinedAt()</error>
-      <error line="206" code="PPC:ERR-50008">No summary for method getLarge()</error>
-      <error line="209" code="PPC:ERR-50008">No summary for method getUnavailable()</error>
-      <error line="212" code="PPC:ERR-50008">No summary for method getMemberCount()</error>
-      <error line="215" code="PPC:ERR-50008">No summary for method getVoiceStates()</error>
-      <error line="218" code="PPC:ERR-50008">No summary for method getMembers()</error>
-      <error line="221" code="PPC:ERR-50008">No summary for method getChannels()</error>
-      <error line="224" code="PPC:ERR-50008">No summary for method getPresences()</error>
-      <error line="227" code="PPC:ERR-50008">No summary for method getIconURL()</error>
-      <error line="230" code="PPC:ERR-50008">No summary for method getSplashURL()</error>
+      <error line="108" code="PPC:ERR-50015">Argument $guildid is missing from the Docblock of __construct</error>
+      <error line="108" code="PPC:ERR-50015">Argument $token_type is missing from the Docblock of __construct</error>
+      <error line="108" code="PPC:ERR-50015">Argument $token is missing from the Docblock of __construct</error>
+      <error line="108" code="PPC:ERR-50008">No summary for method __construct()</error>
+      <error line="163" code="PPC:ERR-50008">No summary for method getId()</error>
+      <error line="166" code="PPC:ERR-50008">No summary for method getName()</error>
+      <error line="169" code="PPC:ERR-50008">No summary for method getIcon()</error>
+      <error line="172" code="PPC:ERR-50008">No summary for method getSplash()</error>
+      <error line="175" code="PPC:ERR-50008">No summary for method getOwnerId()</error>
+      <error line="178" code="PPC:ERR-50008">No summary for method getRegion()</error>
+      <error line="181" code="PPC:ERR-50008">No summary for method getAfkChannelId()</error>
+      <error line="184" code="PPC:ERR-50008">No summary for method getAfkTimeout()</error>
+      <error line="187" code="PPC:ERR-50008">No summary for method getEmbedEnabled()</error>
+      <error line="190" code="PPC:ERR-50008">No summary for method getEmbedChannelId()</error>
+      <error line="197" code="PPC:ERR-50008">No summary for method getVertificationLevel()</error>
+      <error line="204" code="PPC:ERR-50008">No summary for method getDefaultMessageNotifications()</error>
+      <error line="211" code="PPC:ERR-50008">No summary for method getExplixitContentFilter()</error>
+      <error line="214" code="PPC:ERR-50008">No summary for method getRoles()</error>
+      <error line="217" code="PPC:ERR-50008">No summary for method getEmojis()</error>
+      <error line="220" code="PPC:ERR-50008">No summary for method getFeatures()</error>
+      <error line="227" code="PPC:ERR-50008">No summary for method getMFALevel()</error>
+      <error line="230" code="PPC:ERR-50008">No summary for method getApplicationId()</error>
+      <error line="233" code="PPC:ERR-50008">No summary for method getWidgetEnabled()</error>
+      <error line="236" code="PPC:ERR-50008">No summary for method getWidgetChannelId()</error>
+      <error line="239" code="PPC:ERR-50008">No summary for method getJoinedAt()</error>
+      <error line="242" code="PPC:ERR-50008">No summary for method getLarge()</error>
+      <error line="245" code="PPC:ERR-50008">No summary for method getUnavailable()</error>
+      <error line="248" code="PPC:ERR-50008">No summary for method getMemberCount()</error>
+      <error line="251" code="PPC:ERR-50008">No summary for method getVoiceStates()</error>
+      <error line="254" code="PPC:ERR-50008">No summary for method getMembers()</error>
+      <error line="257" code="PPC:ERR-50008">No summary for method getChannels()</error>
+      <error line="260" code="PPC:ERR-50008">No summary for method getPresences()</error>
+      <error line="263" code="PPC:ERR-50008">No summary for method getIconURL()</error>
+      <error line="266" code="PPC:ERR-50008">No summary for method getSplashURL()</error>
     </parse_markers>
-    <source>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</source>
+    <source>eJztWW1v4zYS/h4g/4FNgyZZxPZucTgUSbdXX+K0KbxxYDtbFN3CYCTa1q4sqSLl7La3//2GbxIpiZS2WPS+nBHE1nDmmSE5MxwNv/1Xts0OD0bPnh0eoGfohyKKw6EgoWejw4ME7wjNcEDQdUSDNA/fzB7fkoDRN4Lz8vDg8KCgBL2pD8/TmIh/4zzHHy4dXJNd+jbSX15OoU7+f0V2jyRv5Vbfwiw9peU2ogj+2JbI6aFUYA7RghCEtoxl9GI0CqUozrJhkO5GIdmTOM1ITkdhGtBRTmha5AGhow3H+FL8H0gktE5ztEtzgqIEfu4wi9JkqFYwiDGlSvGfQIMPWIa+Z2mYonWURHSLuAa0JQDAJUqWPc4BkZENyf+TFHEsphCB/WvxS5hQSmTFYxwF6Djis7cgKMujZFMhCDmK+NbWhTmtl/gJLGmQJmiLwfyGCTDSF4VmMYdoxZFjdaSuFQHQ9CkheQNOUFfd6xOFJGHROgIIhbtPI4iAnGxgXxuwkvwJVuL1OxRscZKQuAEGYys11mJpAxTv0iJhHJgSWHTY1Uey5o6IEcRFjjaEwXLs0j0JuXDaSz+LdiQtWF35YwrRjBOpPDJdEIKLh2QY4seYNCDF0IokfLB7RtUySUgw3GWrBP6E1dqTnO9rIOITxTzCUUII1wFLA0CsoQNESomVkOjUEpI1LmKGIHFSvCEoSRtK61qUyEqJrEwR2lsheZ8BWsQQeAIDF4bsEjNwgnadmnuluFeSu64N8zQrdeFEPvENysEXVB6lzYiAwYbZDiDCU78TSYx6oTSODGJazwRrglkBubuBrAe8q5sT4Enk0ZGT34soB1fZrbFaUp723YkY+Hp4DM7iWDuHsr2Zz4IcrAVlEHWwvRBujymTRNLUCyeYRmwJCiuKzfmpAfRE4AkyX84dV4xAIoEwQE9RCOlEBLuM5YZmydEr1KVmAa8CGGat19NW6NDSjPsRJL84faLgFOCbSfwBgCAKniK2lYf/w+30enU1n4yXEzTZw5h3YxJ0u5h988/nL9ASEiJleJehpy1JjC1/wtS5DW/TKIH0hP15VK024zVKmUwhIikcQjmDNB7jfOPyMDH26fBFgvc4ikWyVttcRzZYegcISxmOjRNpJ8q0ZuRJOqQd4OsT2RmGrB0AtDyFYSOYO/UInpXg6ZU25KJIk5ygaiZ98PRZ5YJS472wyolnkKcSmHqRhb65czYCfFSUvwpe/oAy+Er4KXhUQp5kOaqHShZdKWOxyAC5LpJAZCZ+PJryYtmGDYDvwWS8UzM4TjNxflnpXtP+YtUtjRhsTPO1VnkCoGOWviPJin3IiHRL/kPlUzHklVOpkFdN4rlljip1qdJfRwC23i0g/SBaBGA4PUdHawglEh5xIv8Jx04D1t7K+vLLaQsFp3pZz82Z6ocz/YrBP+Bs6CUKihySZBKx07PLakxQKWEAthKbcwrc53KfTis2/rl6mE9n98sVfKGX36EjvnXNncNZNNofoaF+T7y4gIMo2gPhSO4dPTpvx/1xubz/cTK+nswFGVRIK07GBdumefSHOMou0AlgmZs7BEpFO3OgzyfLh/ndcj6+W9yABkB/4eC8mU2ns5+ns6vx8nZ25+N8PZn/e7aYaLKHc7GYcu7bm1/uJ1L7cwfn/WyxPEciKZZb7JoT5725nUyvF+foLYVjHqI+DUklV4mdmZt+DOkDa5cg70nAN73hFUGcUlIf0aJCXUikOk47RywviMkKRcppRMG3JMOvJ1F48tuZ5Zn8o8KozEYmd7tvGzo+IsihxAGp483klz8/WlFWhteK18CQBooAbBbOGoXu8PIFGBQhJsP/IMpGfLScxP8jzo44EQ5/V0B4QoKzQ1Cgr75CFl29ALbFCwm2KbLE+a5fILHfNenOSDnmFeHgO6i5XyIj7i5tLm72F5Z9Rl3YZqMBzTtJFTh/asCbhvBeUmUKPPm4Vc+o5JfPPgnd+qlkNMUnpRo+pYx89knY7ZtK0qZ3IagGjC2uiD5Zq9NSSVvkbvk2++sjPpRmy6TCaY75kLxtkQrUy+adb3sLxJh2O4PXZ3jvAxD4uVa2v3X4iEEIHN8W8IaHkjfa4qflRnCSF6JseZTT0BSf3WW3ohIrSV5/tboNhstadB+C3TWoEGx6D4Q2x20MteI08nP58u7Kcob2krfSaoi3aDNk5dt9KSceu2TM1/dS0krMfnnz/dvYbIPahWC+ZBuxbVD72aD9vH6rc2rZ5PB2A02/VFe2CErcbUf5ylyJlqRW2Y82yXisSsz2IhPc8DY8tZxJ1avlYXzprVIB4A6OUR+EcX3jBrmFZOa1o7q9cYMsxJHrg7Eub9xAM34O+xemdm/jxpqL89kHZd3VuIHG63dX0qf8lrXe1nhhl/IU7wK1r2DciBN+Lk9khvRhtt3BdKD2WgDHFcxH3X5qdE0iyDnP0QD9oxz5DPevA7OsGIgjq72vYk7ytXkZNOUyvolaV0dWW79rrmmOXnzWyapyZ6DKnYFZ7vSd/LXEeCUh7syCybcKfe6puvf+68+6HLpGG6gabSBrtL4rMeHi7yN2JaVvhLDX5VtqwvLazJObeOnnTU3GpZkvNHn95w9J48rMDXSjakIfVO2O7G/3dChA+27jq5txZwzXL+Q8iboqXjsOgLa7Njfuz6Ia7ZGvW2/SunB7ZWzX7Zkb/CdRzI69Z1b9ssuNNuUlrg/KvNRywzxU9a4PrHmP5YaUBeiV6MD6vKh5feXGfM1r4oUoib2nS/PWqstOL559YeWGUh7jxardWLnB7nXh7EMz76hKNEeR+jCfWlC6vatTSxAmw1p64bWraoGWHS7eGzUpvNUEtGGWbI46rJBV7l+wQxa/pGGKZYlqYzVsgb//AuMEym8=</source>
   </file>
-  <file path="Discord.php" generated-path="Discord.html" hash="b8436daaf530288f1fa9e5a78056951d" package="Default">
+  <file path="Objects\Voice\VoiceRegionArray.php" generated-path="Objects.Voice.VoiceRegionArray.html" hash="578e93c8aafe8ee17ffd9df531791c2e" package="Default">
+    <docblock line="0">
+      <description>VoiceRegionArray.php</description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="VoiceRegion">\Discord\Objects\Voice\VoiceRegion</namespace-alias>
+    <class final="false" abstract="false" namespace="Discord\Objects\Voice" line="12" package="Default">
+      <extends/>
+      <name>VoiceRegionArray</name>
+      <full_name>\Discord\Objects\Voice\VoiceRegionArray</full_name>
+      <docblock line="12">
+        <description>This is the VoiceRegionArray class, which contains an array of VoiceRegion objects</description>
+        <long-description></long-description>
+        <tag name="package" line="12" description="Default"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="Discord\Objects\Voice" line="14" package="Default">
+        <name>$array</name>
+        <full_name>\Discord\Objects\Voice\VoiceRegionArray::array</full_name>
+        <default></default>
+        <docblock line="14">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="14" description="&lt;p&gt;an array of VoiceRegion Objects&lt;/p&gt;" type="array|null" variable="">
+            <type>array</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Voice" line="25" package="Default">
+        <name>__construct</name>
+        <full_name>\Discord\Objects\Voice\VoiceRegionArray::__construct()</full_name>
+        <docblock line="25">
+          <description>create new VoiceRegion Objects</description>
+          <long-description>This constructor creates an array of VoiceRegion objects based on the json-Data given.</long-description>
+          <tag name="param" line="25" description="&lt;p&gt;the json data.&lt;/p&gt;" type="array" variable="$data">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="25" description="" type="void">
+            <type>void</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$data</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord\Objects\Voice" line="40" package="Default">
+        <name>getVoiceRegionByID</name>
+        <full_name>\Discord\Objects\Voice\VoiceRegionArray::getVoiceRegionByID()</full_name>
+        <docblock line="40">
+          <description>get a voice region by its id</description>
+          <long-description>This function returns a VoiceRegion object based on the id given in the parameter</long-description>
+          <tag name="param" line="40" description="&lt;p&gt;the id of the voice region e.g: &quot;frankfurt&quot;&lt;/p&gt;" type="string" variable="$id">
+            <type>string</type>
+          </tag>
+          <tag name="return" line="40" description="returns a VoiceRegion object" type="object">
+            <type>object</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$id</name>
+          <default></default>
+          <type>string</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJyFUstOwzAQvEfKP6xQJEoF5U55qxdOSAhxoVW1dTaJodiR7RRVwL+zsZOS0BYiH/zYmd2ZyflVWZRxdDocxhEM4UlLQQ+US61ujMH1yL/C8DSOFL6RLVEQTKQV2qTT+8ULCWenHjSOoziqLMF05/O0w+xL246PhbTAyxW01R3EEq09hvdCigKEVg6lsoAK0D/rrAsBHRo283rsNuUHP/PH7eF6hSYwfapqudzL2wjxrDW2rBZLKSDxxV5Mwxg2LEoYQkeg6H0XUVu2KfcesDzrTCWcNg3+X6WwQEsp8EXt3ovV6mSCDiGXK1KjrTbXJRp8axiTtK5scVCfdiAMucooWGmZtpd9E7JKCVePNJ9vBAw891Frdf0ljiWeXIbWF2GEwdH4pyDTLJlDDlhAC8mqFmy84B7Xb77nbuXzoUwPZzPu8cv8QY+v0/krbL+2U8zJAYKHQcDBYg2Sff9xo5/hxo3gGwe4I7Z+ajINcYEMZ58ROTL74mOPpcohYWCD55+j3vUGpVF+BgeZQfWaVcYd7I22memvgf9Jnm3qYG7Xd5MBD9eLrOnVT02ms/HGe17fmeJc2Q==</source>
+  </file>
+  <file path="Discord.php" generated-path="Discord.html" hash="377cc9ce1cbbc2f17c3671a70bc3ec19" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -1074,18 +1488,18 @@
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord" line="44" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord" line="42" package="Default">
         <name>getGuildId</name>
         <full_name>\Discord\Discord::getGuildId()</full_name>
-        <docblock line="44">
+        <docblock line="42">
           <description></description>
           <long-description></long-description>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord" line="47" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Discord" line="45" package="Default">
         <name>getDiscordAccessToken</name>
         <full_name>\Discord\Discord::getDiscordAccessToken()</full_name>
-        <docblock line="47">
+        <docblock line="45">
           <description></description>
           <long-description></long-description>
         </docblock>
@@ -1097,13 +1511,13 @@
       <error line="12" code="PPC:ERR-50015">Argument $array is missing from the Docblock of __construct</error>
       <error line="12" code="PPC:ERR-50015">Argument $bottoken is missing from the Docblock of __construct</error>
       <error line="12" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="44" code="PPC:ERR-50008">No summary for method getGuildId()</error>
-      <error line="47" code="PPC:ERR-50008">No summary for method getDiscordAccessToken()</error>
+      <error line="42" code="PPC:ERR-50008">No summary for method getGuildId()</error>
+      <error line="45" code="PPC:ERR-50008">No summary for method getDiscordAccessToken()</error>
       <error line="8" code="PPC:ERR-50007">No summary for property $token</error>
       <error line="9" code="PPC:ERR-50007">No summary for property $apiv</error>
       <error line="10" code="PPC:ERR-50007">No summary for property $guildid</error>
     </parse_markers>
-    <source>eJyFVE2L2zAQPTeQ/zA1BjuQxrceNo5LYUtYKCw0u6ckGEWexGq9kpHkhLbkv1eSnfgjbSpyiGdGb968mVH8qczL8YiTN1QloQiPTFEhs/l4NB5VCmHTGDbPu+9ItdosK1bUbloQpS4X4Lc1gTlltSsYBV+LH8jnPZvSRFsXKdkRFvCx7/UPFprV4B37vuJUM8EhTangSsuK6tAnUpKfU/B3QrtME8sAmlMnNymu7iuoPW1Rnyudbx5xT6pCr6goUT08KNQ9S7gODEqwnfQw/FKKI8tQmiwcTzeY9Ve4Ho/eXa4EtGDI9VMWuM9FAnUV69axnd7Gr5BK1MFtfOPo35GYMWk69SpZ0MvRdWzbOrplsT2E75kyAoR+uvzyYhKJDE3lTtwmB9JcQBATyCXuF14wuyrxITmgttULyX4R27JXWYSTWeAlX8WBcTgxnV8GJo5IEswvPM6AhZm2Ngv4NrXtYB+dUlTqxXY0DEg3VeqoTsEKflUD6gKcDN2C2vIvCnS+owiWqEHnCGYDJAg3+bNejO88Q3bfUIlKUnw+cZShq+AG28nnxaXExIMZHIlMs+qtDB3ixFi8OLLOeCcT75/E3KooIDwDsxMc3YKoWXdA3RrkTBlm9V5ZurUIzpAyM27z4Q3TU4kqvy98E5S6zao1h+EZBLkWWEEaoZyvhptM77bjOggN4JByFDVl+qTl2I03sq20kOiEs6vqGLX9PNf/zn9/dAxb9+Q9ZWHviTGbV0k+kHj+P6hm+Ltq3kHtPqEG0/z+AGe9nCQ=</source>
+    <source>eJx9VMGK2zAQPTeQf5gag23IxrceNo5LYUtYKCw0u6ckGEWexGq9kpHkhLbk3yvJTmwnbYQP1szozbw3GiWfq6Iajzh5R1URivDEFBUyn41H41GtENatYf2y/YFUq/WiZmXjpiVR6nwA/lgTmFXV25JR8LX4iXw2sClNtHWRih1gDp+GXn9voVkD3rPvak41ExyyjAqutKypDn0iJfk1AX8rtMsU2QqgXU1yk+LivoDa1ZH6Uuti/YQ7Upd6SUWF6vFRoR5YwlVgUIJNNMDwKykOLEdpsnA83mA2u3A1Hn04HwloyZDr5zxw23kKDYtV59hMbuOXSCXq4Da+dQzPSMyZNJ16kywY5Og7Nh2PPi22g/AjU0aA0M8WX19NIpGjYe7EbXMgLQQECYFC4m7uBdOLEg/pHrVlLyT7TWzL3mQZRtPAS7+JPeNwZLo4X5gkJmkwO9dxAizNbeuygG9T2w4O0SlFpV5tR8OA9FNlrtQJWMEvakBDwMnQJ9TRPyvQ28cxLFCDLhDMBEgQ7uZPBzG+81xX9x2VqCXFlyNHGToGN9hOPi+pJKYeTOFAZJbX71XoECNj8ZLYOpOtTL3/FuZGRQHhOZiZ4OgGRE37F9RWaTokURX3ZWyDMjcnjYJwva6CnKCWXkvb+Rq4aHJX3EtbW8DZVclx7OuCqYfUJ12N/XgjwlILiU4GO3iuoq47p+bv9O8nxFTrHrDnPBw8GGaOasmhzd09RPeh2qvcV/MOav9BNJjm+wuKUY8L</source>
   </file>
   <file path="Objects\Guild\GuildMember.php" generated-path="Objects.Guild.GuildMember.html" hash="c3ebe72fe2284f4cc3681ecf96620943" package="Default">
     <docblock line="0">
@@ -1655,6 +2069,7 @@
       <namespace name="Emojis" full_name="Discord\Objects\Emojis"/>
       <namespace name="Guild" full_name="Discord\Objects\Guild"/>
       <namespace name="Role" full_name="Discord\Objects\Role"/>
+      <namespace name="Voice" full_name="Discord\Objects\Voice"/>
     </namespace>
   </namespace>
   <deprecated count="0"/>

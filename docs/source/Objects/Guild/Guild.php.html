@@ -42,13 +42,14 @@ namespace Discord\Objects\Guild;
 
 use \Discord\Objects\Role\RoleArray;
 use \Discord\Objects\Emojis\EmojisArray;
+use \Discord\Objects\Guild\GuildMemberArray;
 use \Discord\Discord;
 
 /**
  * This is the Guild object. See  https://discordapp.com/developers/docs/resources/guild#guild-object for more information.
  */
 class Guild {
-
+    /** @todo finish docs here */
     /** @var integer|null the id of the guild */
     public $id;
     /** @var string|null the guilds name*/
@@ -107,6 +108,39 @@ class Guild {
     /** @var array|null array of partical presnce update objects */
     public $presences;
 
+    /**
+     * Create a new Guild
+     *
+     * This is a static function to create a new guild.
+     *
+     * @param array $options an array of options https://discordapp.com/developers/docs/resources/guild#create-guild
+     * @param string $token_type the type of the token
+     * @param string $token the bot's token.
+     *
+     * @return object returns a Guild object on success, &quot;failed&quot; on failure.
+     *
+     */
+    public static function createGuild($options, $token_type, $token) {
+        $ch = curl_init();
+        curl_setopt_array($ch, array(
+            CURLOPT_URL =&gt; &quot;http://discordapp.com/api/v&quot; . Discord::$apiv . &quot;/guilds&quot;,
+            CURLOPT_HTTPHEADER     =&gt; array('Authorization: ' . $token_type . ' ' . $token),
+            CURLOPT_RETURNTRANSFER =&gt; 1,
+            CURLOPT_FOLLOWLOCATION =&gt; 1,
+            CURLOPT_VERBOSE        =&gt; 1,
+            CURLOPT_SSL_VERIFYPEER =&gt; 0,
+            CURLOPT_POST, count($options),
+            CURLOPT_POSTFIELDS, json_encode($options)
+        ));
+        $data = curl_exec($ch);
+        curl_close($ch);
+        $data = json_decode($data, true);
+        if (isset($data['id'])) {
+            return new Guild($data['id'], $token_type, $token);
+        } else {
+            return &quot;failed&quot;;
+        }
+    }
     public function __construct($guildid, $token_type, $token) {
 
         $ch = curl_init(); //
@@ -128,34 +162,36 @@ class Guild {
             echo $data['code'] . &quot;: &quot; . $data['message'];
         } else {
             $this-&gt;id = $data['id'];
-            $this-&gt;name = $data['name'];
-            $this-&gt;icon = $data['icon'];
-            $this-&gt;splash = $data['splash'];
-            $this-&gt;owner_id = $data['owner_id'];
-            $this-&gt;region = $data['region'];
-            $this-&gt;afk_channel_id = $data['afk_channel_id'];
-            $this-&gt;afk_timeout = $data['afk_timeout'];
-            $this-&gt;embed_enabled = $data['embed_enabled'];
-            $this-&gt;embed_channel_id = $data['embed_channel_id'];
-            $this-&gt;verification_level = $data['verification_level'];
-            $this-&gt;default_message_notifications = $data['default_message_notifications'];
-            $this-&gt;explicit_content_filter = $data['explicit_content_filter'];
-            $this-&gt;roles = new RoleArray($data['roles']);
-            $this-&gt;emojis = new EmojisArray($data['emojis']);
-            $this-&gt;features = $data['features'];
-            $this-&gt;mfa_level = $data['mfa_level'];
-            $this-&gt;application_id = $data['application_id'];
-            $this-&gt;widget_enabled = $data['widget_enabled'];
-            $this-&gt;widget_channel_id = $data['widget_channel_id'];
-            if (isset($data['joined_at'])) {
-                $this-&gt;joined_at = $data['joined_at'];
-                $this-&gt;large = $data['large'];
-                $this-&gt;unavailable = $data['unavailable'];
-                $this-&gt;member_count = $data['member_count'];
-                $this-&gt;voice_states = $data['voice_states'];
-                $this-&gt;members = $data['members'];
-                $this-&gt;channels = $data['channles'];
-                $this-&gt;presences = $data['presences'];
+            if (!isset($data['unavailable'])) {
+                $this-&gt;name = $data['name'];
+                $this-&gt;icon = $data['icon'];
+                $this-&gt;splash = $data['splash'];
+                $this-&gt;owner_id = $data['owner_id'];
+                $this-&gt;region = $data['region'];
+                $this-&gt;afk_channel_id = $data['afk_channel_id'];
+                $this-&gt;afk_timeout = $data['afk_timeout'];
+                $this-&gt;embed_enabled = $data['embed_enabled'];
+                $this-&gt;embed_channel_id = $data['embed_channel_id'];
+                $this-&gt;verification_level = $data['verification_level'];
+                $this-&gt;default_message_notifications = $data['default_message_notifications'];
+                $this-&gt;explicit_content_filter = $data['explicit_content_filter'];
+                $this-&gt;roles = new RoleArray($data['roles']);
+                $this-&gt;emojis = new EmojisArray($data['emojis']);
+                $this-&gt;features = $data['features'];
+                $this-&gt;mfa_level = $data['mfa_level'];
+                $this-&gt;application_id = $data['application_id'];
+                $this-&gt;widget_enabled = $data['widget_enabled'];
+                $this-&gt;widget_channel_id = $data['widget_channel_id'];
+                if (isset($data['joined_at'])) {
+                    $this-&gt;joined_at = $data['joined_at'];
+                    $this-&gt;large = $data['large'];
+                    $this-&gt;unavailable = $data['unavailable'];
+                    $this-&gt;member_count = $data['member_count'];
+                    $this-&gt;voice_states = $data['voice_states'];
+                    $this-&gt;members = new GuildMemberArray($data['members']);
+                    $this-&gt;channels = $data['channles'];
+                    $this-&gt;presences = $data['presences'];
+                }
             }
         }
     }
