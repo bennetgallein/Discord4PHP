@@ -36,48 +36,46 @@
     <body>
         <pre class="brush: php">&lt;?php
 /**
- * GuildMemberArray.php
+ * VoiceRegionArray.php
  */
-namespace Discord\Objects\Guild;
+namespace Discord\Objects\Voice;
 
-use \Discord\Objects\Guild\GuildMember;
+use \Discord\Objects\Voice\VoiceRegion;
+
 /**
- * The is an array of Guild Member objects
+ * This is the VoiceRegionArray class, which contains an array of VoiceRegion objects
  */
-
-/** @todo make the key the id of the user object */
-class GuildMemberArray {
-
-    /** @var array|null array of GuildMember objects */
-    public $guildmembers;
+class VoiceRegionArray {
+    /** @var array|null an array of VoiceRegion Objects */
+    public $array;
 
     /**
-     * This is the GuildMemberArray Object Constructor
+     * create new VoiceRegion Objects
      *
-     * This creates a new Array of GuildMembers based on the Array given
+     * This constructor creates an array of VoiceRegion objects based on the json-Data given.
      *
-     * @param array $data is an array of emojis
+     * @param array $data the json data.
      *
      * @return void
      */
     public function __construct($data) {
-        $this-&gt;guildmembers = array();
-        foreach ($data as $member) {
-            $this-&gt;guildmembers[$member['nick']] = new GuildMember($member);
+        $this-&gt;array = array();
+        foreach ($data as $voiceregion) {
+            $this-&gt;array[$voiceregion['id']] = new VoiceRegion($voiceregion);
         }
     }
     /**
-     * Get a GuildMember Onject by his name
+     * get a voice region by its id
      *
-     * This returns the GuildMember object of the user with the nick given
+     * This function returns a VoiceRegion object based on the id given in the parameter
      *
-     * @param string $name is the nick to look for
+     * @param string $id the id of the voice region e.g: &quot;frankfurt&quot;
      *
-     * @return object|null
+     * @return object returns a VoiceRegion object
      */
-     public function getMemberByName($name) {
-         return $this-&gt;guildmembers[$name];
-     }
+    public function getVoiceRegionByID($id) {
+        return $this-&gt;array[$id];
+    }
 }
 </pre>
         <script type="text/javascript">
