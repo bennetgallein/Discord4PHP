@@ -30,4 +30,16 @@ class GuildMemberArray {
             $this->guildmembers[$member['nick']] = new GuildMember($member);
         }
     }
+    /**
+     * Get a GuildMember Onject by his name
+     *
+     * This returns the GuildMember object of the user with the nick given
+     *
+     * @param string $name is the nick to look for
+     *
+     * @return object|null
+     */
+     public function getMemberByName($name) {
+         return $this->guildmembers[$name];
+     }
 }

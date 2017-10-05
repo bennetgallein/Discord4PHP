@@ -31,8 +31,6 @@ class Discord {
            //echo "<pre>" . var_dump($user) . "</pre><br>";
            // Get the guilds and connections.
 
-           $this->guildid = $_GET['guild_id'];
-
            $refresh = $provider->getAccessToken('refresh_token', [
                  'refresh_token' => $code->getRefreshToken(),
            ]);
