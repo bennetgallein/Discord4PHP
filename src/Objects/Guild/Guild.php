@@ -7,6 +7,8 @@ namespace Discord\Objects\Guild;
 use \Discord\Objects\Role\RoleArray;
 use \Discord\Objects\Emojis\EmojisArray;
 use \Discord\Objects\Guild\GuildMemberArray;
+use \Discord\Objects\Channel\ChannelArray;
+
 use \Discord\Discord;
 
 /**
@@ -153,7 +155,7 @@ class Guild {
                     $this->member_count = $data['member_count'];
                     $this->voice_states = $data['voice_states'];
                     $this->members = new GuildMemberArray($data['members']);
-                    $this->channels = $data['channles'];
+                    $this->channels = new ChannelArray($data['channles']);
                     $this->presences = $data['presences'];
                 }
             }
