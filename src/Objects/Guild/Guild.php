@@ -120,9 +120,9 @@ class Guild {
      * @return void
      */
     public function __construct($guildid, $token_type, $token) {
-
-        $ch = curl_init(); //
-
+      
+        $ch = curl_init();
+        
         curl_setopt_array($ch, array(
             CURLOPT_URL => "http://discordapp.com/api/v" . Discord::$apiv . "/guilds/" . $guildid,
             CURLOPT_HTTPHEADER     => array('Authorization: ' . $token_type . ' ' . $token),
