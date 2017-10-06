@@ -21,9 +21,9 @@ class Emoji {
     public $managed;
 
     /**
-     * This is the Emoji Object Constructor
+     * This is the Emoji object constructor
      *
-     * This creates a new Emoji Object based on the array given.
+     * This creates a new Emoji object based on the array given.
      *
      * @param array $emoji is a array of an emoji objects.
      *
