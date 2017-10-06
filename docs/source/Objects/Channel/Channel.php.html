@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../../../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../../../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../../../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../../../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+namespace Discord\Objects\Channel;
+/**
+ * Channel.php
+ * 
+ * @see https://discordapp.com/developers/docs/resources/channel#channel-object
+ */
+class Channel {
+
+    public $id;
+    /*  GUILD_TEXT	0
+        DM	1
+        GUILD_VOICE	2
+        GROUP_DM	3
+        GUILD_CATEGORY	4
+    */
+    public $type;
+    public $guild_id;
+    public $position;
+    public $permission_overwrites;
+    public $name;
+    public $topic;
+    public $nsfw;
+    public $last_message_id;
+    public $bitrate;
+    public $user_limit;
+    public $recipients;
+    public $icon;
+    public $owner_id;
+    public $application_id;
+    public $parent_id;
+
+    public function __construct($channel) {
+        $this-&gt;id = $channel['id'];
+        $this-&gt;type = $channel['type'];
+        $this-&gt;guild_id = $channel['guild_id'];
+        $this-&gt;position = $channel['position'];
+        $this-&gt;permission_overwrites = $channel['permission_overwrites'];
+        $this-&gt;name = $chanel['name'];
+        $this-&gt;topic = $channel['topic'];
+        $this-&gt;nsfw = $channel['nsfw'];
+        $this-&gt;last_message_id = $channel['last_message_id'];
+        $this-&gt;bitrate = $channel['bitrate'];
+        $this-&gt;user_limit = $channel['user_limit'];
+        $this-&gt;recipients = $channel['recipients'];
+        $this-&gt;icon = $channel['icon'];
+        $this-&gt;owner_id = $channel['owner_id'];
+        $this-&gt;application_id = $channel['application_id'];
+        $this-&gt;parent_id = $channel['parent_id'];
+    }
+    public function getID() {
+        return $this-&gt;id;
+    }
+    public function getType() {
+        return $this-&gt;type;
+    }
+    public function getGuildId() {
+        return $this-&gt;guild_id;
+    }
+    public function getPosition() {
+        return $this-&gt;position;
+    }
+    public function getPermissionOverwrites() {
+        return $this-&gt;permission_overwrites;
+    }
+    public function getName() {
+        return $this-&gt;name;
+    }
+    public function getTopic() {
+        return $this-&gt;topic;
+    }
+    public function getNSFW() {
+        return $this-&gt;nfsw;
+    }
+    public function getLastMessageId() {
+        return $this-&gt;last_message_id;
+    }
+    public function getBitrate() {
+        return $this-&gt;bitrate;
+    }
+    public function getUserLimit() {
+        return $this-&gt;user_limit;
+    }
+    public function getRecipients() {
+        return $this-&gt;recipients;
+    }
+    public function getIcon() {
+        return $this-&gt;icon;
+    }
+    public function getOwnerId() {
+        return $this-&gt;owner_id;
+    }
+    public function getApplicationId() {
+        return $this-&gt;application_id;
+    }
+    public function getParentId() {
+        return $this-&gt;parent_id;
+    }
+}
+</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

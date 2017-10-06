@@ -35,59 +35,24 @@
     </head>
     <body>
         <pre class="brush: php">&lt;?php
+namespace Discord\Objects\Channel;
+
+use \Discord\Objects\Channel\Channel;
 /**
- * EmojisArray.php
- */
-namespace Discord\Objects\Emojis;
+ * @see https://discordapp.com/developers/docs/resources/channel#channel-object-channel-types
+*/
+class ChannelArray {
 
-use \Discord\Objects\Emojis\Emoji;
-/**
- * This is an array of Emoji objects. See the Emoji object for detailed information.
- * @see Emoji
- */
-class EmojisArray {
+    public $channels;
 
-    /** @var object|null Array of Emoji Objects */
-    public $emojisarray;
-
-    /**
-     * This is the EmojiArray object constructor
-     *
-     * This creates a new array of Emoji objects based on the array given
-     *
-     * @param array $data is an array of emojis
-     *
-     * @return void
-     */
-    public function __construct($data) {
-        $this-&gt;emojisarray = array();
-        foreach ($data as $emoji) {
-            $this-&gt;emojisarray[$emoji['name']] = new Emoji($emoji);
+    public function __construct($channels) {
+        $this-&gt;channels = array();
+        foreach ($channels as $channel) {
+            $this-&gt;channels[$channel['id']] = new Channel($channel);
         }
     }
-    /**
-     * Get all Emoji objects as an array
-     *
-     * Returns all the emojis that are stored
-     *
-     * @param none
-     *
-     * @return array
-     */
-    public function getAllEmojis() {
-        return $this-&gt;emojisarray;
-    }
-    /**
-     * Get a Emoji object by name
-     *
-     * Return the Emoji object with the name given
-     *
-     * @param string $name is the emoji to look for.
-     *
-     * @return array
-     */
-    public function getEmojiByName($name) {
-        return $this-&gt;emojisarray[$name];
+    public function getChannelById($id) {
+        return $this-&gt;channels[$id];
     }
 }
 </pre>
