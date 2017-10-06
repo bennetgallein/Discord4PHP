@@ -17,7 +17,7 @@ class Emoji {
     public $roles;
     /** @var boolean|null Whether this emoji must be wrapped in colons */
     public $require_colons;
-    /** @var boolean|null whether this emoji is managed by an integration */
+    /** @var boolean|null Whether this emoji is managed by an integration */
     public $managed;
 
     /**
@@ -49,7 +49,7 @@ class Emoji {
         return $this->id;
     }
     /**
-     * Get the Emojis name
+     * Get the Emoji's name
      *
      * Returns the name of the Emoji
      *
@@ -63,7 +63,7 @@ class Emoji {
     /**
      * Get the roles that are whitelisted
      *
-     * This returns an array of role id's which are allow to use this emoji.
+     * This returns an array of role ids which are allowed to use this emoji.
      *
      * @param none
      *
@@ -87,7 +87,7 @@ class Emoji {
     /**
      * Get the boolean if the emoji is managed
      *
-     * This return a boolean if the emoji is managed by an integration
+     * This returns a boolean if the emoji is managed by an integration
      *
      * @param none
      *
