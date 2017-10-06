@@ -6,7 +6,8 @@ namespace Discord\Objects\Emojis;
 
 use \Discord\Objects\Emojis\Emoji;
 /**
- * This is an Array of Emoji Objects. See the Emoji Object for detailed information.
+ * This is an array of Emoji objects. See the Emoji object for detailed information.
+ * @see Emoji
  */
 class EmojisArray {
 
@@ -14,9 +15,9 @@ class EmojisArray {
     public $emojisarray;
 
     /**
-     * This is the EmojiArray Object Constructor
+     * This is the EmojiArray object constructor
      *
-     * This creates a new Array of Emojis based on the Array given
+     * This creates a new array of Emoji objects based on the array given
      *
      * @param array $data is an array of emojis
      *
@@ -29,9 +30,9 @@ class EmojisArray {
         }
     }
     /**
-     * Get all Emojis as an array
+     * Get all Emoji objects as an array
      *
-     * Returns all the Emojis that are stored
+     * Returns all the emojis that are stored
      *
      * @param none
      *
@@ -41,7 +42,7 @@ class EmojisArray {
         return $this->emojisarray;
     }
     /**
-     * Get a Emoji Object by name
+     * Get a Emoji object by name
      *
      * Return the Emoji object with the name given
      *

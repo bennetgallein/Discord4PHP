@@ -1,6 +1,8 @@
 <?php
 namespace Discord\Objects\Channel;
 /**
+ * Channel.php
+ * 
  * @see https://discordapp.com/developers/docs/resources/channel#channel-object
  */
 class Channel {
