@@ -530,11 +530,29 @@ class Guild {
     /** @todo make this return a presence update array object */
     public function getPresences() {
         return $this->presences;
-   }
-   public function getIconURL() {
-       return "https://cdn.discordapp.com/icons/" . $this->id . "/" . $this->icon . ".png";
-   }
-   public function getSplashURL() {
-       return "https://cdn.discordapp.com/splashes/" . $this->id ."/" . $this->splash . ".png";
-   }
+    }
+    /**
+     * Gets guild's icon hash
+     *
+     * This returns this guild's icon image hash which represents the file name on Discord's CDN
+     *
+     * @param none
+     * 
+     * @return string
+     */
+    public function getIconURL() {
+        return "https://cdn.discordapp.com/icons/" . $this->id . "/" . $this->icon . ".png";
+    }
+    /**
+     * Gets guild's splash hash
+     *
+     * This returns this guild's splash image hash which represents the file name on Discord's CDN
+     *
+     * @param none
+     * 
+     * @return string
+     */
+    public function getSplashURL() {
+        return "https://cdn.discordapp.com/splashes/" . $this->id ."/" . $this->splash . ".png";
+    }
 }
