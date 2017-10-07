@@ -43,7 +43,7 @@ class Channel {
     public $icon;
     /** @var integer|null The id of the channel's owner */
     public $owner_id;
-    /** @var integer|null The application if of the channel's creator if it is bot created */
+    /** @var integer|null The application id of the channel's creator if it is bot created */
     public $application_id;
     /** @var integer|null The id of the parent category of the channel */
     public $parent_id;
