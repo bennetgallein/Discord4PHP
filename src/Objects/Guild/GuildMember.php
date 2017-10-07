@@ -1,6 +1,6 @@
 <?php
 /**
- * Emoji.php
+ * GuildMember.php
  *
  */
 namespace Discord\Objects\Guild;
