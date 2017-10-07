@@ -4,7 +4,7 @@ namespace Discord\Objects\Channel;
 use \Discord\Objects\Channel\Channel;
 /**
  * @see https://discordapp.com/developers/docs/resources/channel#channel-object-channel-types
-*/
+ */
 class ChannelArray {
 
     public $channels;

@@ -1,11 +1,11 @@
 <?php
 /**
  * Emoji.php
- *
  */
 namespace Discord\Objects\Emojis;
 /**
- * Emoji Object REFERENCE TO DISCORD HERE
+ * This is the Emoji object. Visit the discord API for more information.
+ * @see https://discordapp.com/developers/docs/resources/emoji#emoji-object
  */
 class Emoji {
 
