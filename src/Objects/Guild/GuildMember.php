@@ -36,7 +36,7 @@ class GuildMember {
      */
     public function __construct($member) {
         $this->user = $member['user'];
-        $this->nick = $member['nick'];
+        $this->nick = isset($member['nick']) ? $member['nick'] : null; // optional field
         $this->roles = $member['roles'];
         $this->joined_at = $member['joined_at'];
         $this->deaf = $member['deaf'];
