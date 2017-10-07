@@ -45,7 +45,7 @@ class GuildMember {
     /**
      * Get the User object
      *
-     * Returns the object of the user
+     * This returns the object of the user
      *
      * @param none
      *
@@ -55,9 +55,9 @@ class GuildMember {
         return $this->user;
     }
     /**
-     * Get the User's nickname
+     * Get the user's nickname
      *
-     * Returns the nickname of the user
+     * This returns the nickname of the user
      *
      * @param none
      *
@@ -69,7 +69,7 @@ class GuildMember {
     /**
      * Get the user's roles
      *
-     * Returns an array of role id's
+     * This returns an array of role id's which this user has
      *
      * @param none
      *
@@ -79,9 +79,9 @@ class GuildMember {
         return $this->roles;
     }
     /**
-     * Get the timestamp when the user joined
+     * Get the timestamp when the user joined (YYYY-MM-DD)
      *
-     * Returns the ISO8601 when the member joined at.
+     * This returns a timestamp string in the YYYY-MM-DD format (ISO8601)
      *
      * @param none
      *
@@ -91,9 +91,9 @@ class GuildMember {
         return $this->joined_at;
     }
     /**
-     * Get if member is deaf
+     * Get whether the member is deaf or not
      *
-     * Returns the boolean if the user is deaf
+     * This returns the boolean if the user is deaf
      *
      * @param none
      *
@@ -104,9 +104,9 @@ class GuildMember {
     }
     /**
      *
-     * Get if member is muted
+     * Get whether the member is muted or not
      *
-     * Returns the boolean if the user is muted
+     * This returns the boolean if the user is muted
      *
      * @param none
      *
