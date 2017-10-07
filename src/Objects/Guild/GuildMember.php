@@ -5,7 +5,8 @@
  */
 namespace Discord\Objects\Guild;
 /**
- * Emoji Object REFERENCE TO DISCORD HERE
+ * GuildMember Object
+ * @see https://discordapp.com/developers/docs/resources/guild#guild-member-object
  */
 
 /** @todo make this return a user object */
@@ -86,6 +87,8 @@ class GuildMember {
      * @param none
      *
      * @return string
+     *
+     * @see https://en.wikipedia.org/wiki/ISO_8601
      */
     public function getJoinedAt() {
         return $this->joined_at;
