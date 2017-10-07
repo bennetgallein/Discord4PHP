@@ -29,7 +29,7 @@ class GuildMember {
      *
      * This creates a new GuildMember object based on the array given.
      *
-     * @param array $member is a array of an member object.
+     * @param array $member is a array of a member object.
      *
      * @return void
      */
