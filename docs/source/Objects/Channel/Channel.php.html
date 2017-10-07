@@ -35,14 +35,17 @@
     </head>
     <body>
         <pre class="brush: php">&lt;?php
-namespace Discord\Objects\Channel;
 /**
  * Channel.php
- * 
+ */
+namespace Discord\Objects\Channel;
+/**
+ * This is the Channel object. Visit the discord API for more information.
  * @see https://discordapp.com/developers/docs/resources/channel#channel-object
  */
 class Channel {
 
+    /** @var integer|null The ID of the channel */
     public $id;
     /*  GUILD_TEXT	0
         DM	1
@@ -50,85 +53,259 @@ class Channel {
         GROUP_DM	3
         GUILD_CATEGORY	4
     */
+    /** @var integer|null The type of the channel */
     public $type;
+    /** @var integer|null The guild ID of the channel */
     public $guild_id;
+    /** @var integer|null The sorting position of the channel */
     public $position;
+    /** @var array|null An array of overwrite objects */
     public $permission_overwrites;
+    /** @var string|null The name of the channel */
     public $name;
+    /** @var string|null The topic of the channel */
     public $topic;
+    /** @var boolean|null Whether this channel is nsfw */
     public $nsfw;
+    /** @var integer|null The id of the last message in the channel */
     public $last_message_id;
+    /** @var integer|null The bitrate of the voice channel */
     public $bitrate;
+    /** @var integer The maximum user count in this channel */
     public $user_limit;
+    /** @var array|null An array of receipients of the channel */
     public $recipients;
+    /** @var string|null The icon hash of the channel */
     public $icon;
+    /** @var integer|null The id of the channel's owner */
     public $owner_id;
+    /** @var integer|null The application id of the channel's creator if it is bot created */
     public $application_id;
+    /** @var integer|null The id of the parent category of the channel */
     public $parent_id;
 
+    /**
+     * This is the Channel object constructor.
+     *
+     * This creates a new Channel object based on the array given.
+     * 
+     * @param array $channel is an array of a channel object.
+     *
+     * @return void
+     */
     public function __construct($channel) {
         $this-&gt;id = $channel['id'];
         $this-&gt;type = $channel['type'];
-        $this-&gt;guild_id = $channel['guild_id'];
-        $this-&gt;position = $channel['position'];
-        $this-&gt;permission_overwrites = $channel['permission_overwrites'];
-        $this-&gt;name = $chanel['name'];
-        $this-&gt;topic = $channel['topic'];
-        $this-&gt;nsfw = $channel['nsfw'];
-        $this-&gt;last_message_id = $channel['last_message_id'];
-        $this-&gt;bitrate = $channel['bitrate'];
-        $this-&gt;user_limit = $channel['user_limit'];
-        $this-&gt;recipients = $channel['recipients'];
-        $this-&gt;icon = $channel['icon'];
-        $this-&gt;owner_id = $channel['owner_id'];
-        $this-&gt;application_id = $channel['application_id'];
-        $this-&gt;parent_id = $channel['parent_id'];
+        $this-&gt;guild_id = isset($channel['guild_id']) ? $channel['guild_id'] : null;
+        $this-&gt;position = isset($channel['position']) ? $channel['position']: null;
+        $this-&gt;permission_overwrites = isset($channel['permission_overwrites']) ? $channel['permission_overwrites'] : null;
+        $this-&gt;name = isset($channel['name']) ? $chanel['name'] : null;
+        $this-&gt;topic = isset($channel['topic']) ? $channel['topic'] : null;
+        $this-&gt;nsfw = isset($channel['nsfw']) ? $channel['nsfw'] : null;
+        $this-&gt;last_message_id = isset($channel['last_message_id']) ? $channel['last_message_id'] :null;
+        $this-&gt;bitrate = isset($channel['bitrate']) ? $channel['bitrate'] : null;
+        $this-&gt;user_limit = isset($channel['user_limit']) ? $channel['user_limit'] : null;
+        $this-&gt;recipients = isset($channel['recipients']) ? $channel['recipients'] : null;
+        $this-&gt;icon = isset($channel['icon']) ? $channel['icon'] : null;
+        $this-&gt;owner_id = isset($channel['owner_id']) ? $channel['owner_id'] : null;
+        $this-&gt;application_id = isset($channel['application_id']) ? $channel['application_id'] : null;
+        $this-&gt;parent_id = isset($channel['parent_id']) ? $channel['parent_id'] : null;
     }
+    /**
+     * Get the id of the channel
+     *
+     * This returns a unique channel id based on twitter's snowflake id system
+     *
+     * @param none
+     * 
+     * @return integer
+     */
     public function getID() {
         return $this-&gt;id;
     }
+    /**
+     * Get the type of the channel
+     *
+     * This returns the type of the channel
+     *
+     * @param none
+     * 
+     * @return integer 0 - 4
+     *
+     * @see https://discordapp.com/developers/docs/resources/channel#channel-object-channel-types
+     */
     public function getType() {
         return $this-&gt;type;
     }
+    /**
+     * Get the channel's guild id.
+     *
+     * This returns a unique guild id based on twitter's snowflake id system
+     *
+     * @param none
+     * 
+     * @return integer
+     */
     public function getGuildId() {
         return $this-&gt;guild_id;
     }
+    /**
+     * Get the sorting position of the channel
+     *
+     * This returns an integer representing the index of this channel
+     *
+     * @param none
+     * 
+     * @return integer
+     */
     public function getPosition() {
         return $this-&gt;position;
     }
+    /**
+     * Get an array of overwrite objects
+     *
+     * This returns explicit permission overwrites for members and roles as an array of overwrite objects.
+     *
+     * @param none
+     * 
+     * @return array
+     *
+     * @see https://discordapp.com/developers/docs/resources/channel#overwrite-object
+     */
     public function getPermissionOverwrites() {
         return $this-&gt;permission_overwrites;
     }
+    /**
+     * Get the name of the channel
+     *
+     * This returns the name of the channel
+     *
+     * @param none
+     * 
+     * @return string 2-100 characters
+     */
     public function getName() {
         return $this-&gt;name;
     }
+    /**
+     * Get the topic of the channel
+     *
+     * This returns the channel topic
+     *
+     * @param none
+     * 
+     * @return string 0-1024 characters
+     */
     public function getTopic() {
         return $this-&gt;topic;
     }
+    /**
+     * Get whether this channel is nsfw
+     *
+     * This returns a boolean whether this channel is not safe for work
+     *
+     * @param none
+     * 
+     * @return boolean
+     */
     public function getNSFW() {
         return $this-&gt;nfsw;
     }
+    /**
+     * Get the id of the last message in the channel
+     *
+     * This returns the id of the last message sent in this channel based on twitter's snowflake id system.
+     *
+     * NOTE: May not point to an existing or valid message
+     *
+     * @param none
+     * 
+     * @return integer
+     */
     public function getLastMessageId() {
         return $this-&gt;last_message_id;
     }
+    /**
+     * Get the bitrate of the voice channel
+     *
+     * This returns the bitrate of the channel if it is a voice channel in bits
+     *
+     * @param none
+     * 
+     * @return integer
+     */
     public function getBitrate() {
         return $this-&gt;bitrate;
     }
+    /**
+     * Get the maximum user count in this channel
+     *
+     * This returns how many users can be in this channel at most
+     *
+     * @param none
+     * 
+     * @return integer
+     */
     public function getUserLimit() {
         return $this-&gt;user_limit;
     }
+    /**
+     * Get an array of receipients of the channel
+     *
+     * This returns an array of user objects representing the receipients of channel messages
+     *
+     * @param none
+     * 
+     * @return array
+     */
     public function getRecipients() {
         return $this-&gt;recipients;
     }
+    /**
+     * Get the icon hash of the channel
+     *
+     * This returns the channel's icon hash on discord's CDN
+     *
+     * @param none
+     * 
+     * @return string
+     */
     public function getIcon() {
         return $this-&gt;icon;
     }
+    /**
+     * Get the id of the channel's owner
+     *
+     * This returns the id of the channel's owner based on twitter's snowflake id system
+     *
+     * @param none
+     * 
+     * @return integer
+     */
     public function getOwnerId() {
         return $this-&gt;owner_id;
     }
+    /**
+     * Get the application id of the channel's creator if it is bot created
+     *
+     * This returns a unique application id of the channel's creator if this channel was created by a bot
+     *
+     * @param none
+     * 
+     * @return integer
+     */
     public function getApplicationId() {
         return $this-&gt;application_id;
     }
+    /**
+     * Get the id of the parent category of the channel
+     *
+     * This returns the id of the parent category of the channel
+     *
+     * @param none
+     * 
+     * @return integer
+     */
     public function getParentId() {
         return $this-&gt;parent_id;
     }
