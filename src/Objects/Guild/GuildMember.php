@@ -5,7 +5,7 @@
  */
 namespace Discord\Objects\Guild;
 /**
- * GuildMember Object
+ * This is the GuildMember object. Visit the discord API for more information.
  * @see https://discordapp.com/developers/docs/resources/guild#guild-member-object
  */
 
