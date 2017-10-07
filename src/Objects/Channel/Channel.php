@@ -60,20 +60,20 @@ class Channel {
     public function __construct($channel) {
         $this->id = $channel['id'];
         $this->type = $channel['type'];
-        $this->guild_id = $channel['guild_id'];
-        $this->position = $channel['position'];
-        $this->permission_overwrites = $channel['permission_overwrites'];
-        $this->name = $chanel['name'];
-        $this->topic = $channel['topic'];
-        $this->nsfw = $channel['nsfw'];
-        $this->last_message_id = $channel['last_message_id'];
-        $this->bitrate = $channel['bitrate'];
-        $this->user_limit = $channel['user_limit'];
-        $this->recipients = $channel['recipients'];
-        $this->icon = $channel['icon'];
-        $this->owner_id = $channel['owner_id'];
-        $this->application_id = $channel['application_id'];
-        $this->parent_id = $channel['parent_id'];
+        $this->guild_id = isset($channel['guild_id']) ? $channel['guild_id'] : null;
+        $this->position = isset($channel['position']) ? $channel['position']: null;
+        $this->permission_overwrites = isset($channel['permission_overwrites']) ? $channel['permission_overwrites'] : null;
+        $this->name = isset($channel['name']) ? $chanel['name'] : null;
+        $this->topic = isset($channel['topic']) ? $channel['topic'] : null;
+        $this->nsfw = isset($channel['nsfw']) ? $channel['nsfw'] : null;
+        $this->last_message_id = isset($channel['last_message_id']) ? $channel['last_message_id'] :null;
+        $this->bitrate = isset($channel['bitrate']) ? $channel['bitrate'] : null;
+        $this->user_limit = isset($channel['user_limit']) ? $channel['user_limit'] : null;
+        $this->recipients = isset($channel['recipients']) ? $channel['recipients'] : null;
+        $this->icon = isset($channel['icon']) ? $channel['icon'] : null;
+        $this->owner_id = isset($channel['owner_id']) ? $channel['owner_id'] : null;
+        $this->application_id = isset($channel['application_id']) ? $channel['application_id'] : null;
+        $this->parent_id = isset($channel['parent_id']) ? $channel['parent_id'] : null;
     }
     /**
      * Get the id of the channel
