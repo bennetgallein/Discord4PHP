@@ -9,6 +9,7 @@ namespace Discord\Objects\Channel;
  */
 class Channel {
 
+    /** @var integer|null The ID of the channel */
     public $id;
     /*  GUILD_TEXT	0
         DM	1
@@ -16,20 +17,35 @@ class Channel {
         GROUP_DM	3
         GUILD_CATEGORY	4
     */
+    /** @var integer|null The type of the channel */
     public $type;
+    /** @var integer|null The guild ID of the channel */
     public $guild_id;
+    /** @var integer|null The sorting position of the channel */
     public $position;
+    /** @var array|null An array of overwrite objects */
     public $permission_overwrites;
+    /** @var string|null The name of the channel */
     public $name;
+    /** @var string|null The topic of the channel */
     public $topic;
+    /** @var boolean|null Whether this channel is nsfw */
     public $nsfw;
+    /** @var integer|null The id of the last message in the channel */
     public $last_message_id;
+    /** @var integer|null The bitrate of the voice channel */
     public $bitrate;
+    /** @var integer The maximum user count in this channel */
     public $user_limit;
+    /** @var array|null An array of receipients of the channel */
     public $recipients;
+    /** @var string|null The icon hash of the channel */
     public $icon;
+    /** @var integer|null The id of the channel's owner */
     public $owner_id;
+    /** @var integer|null The application if of the channel's creator if it is bot created */
     public $application_id;
+    /** @var integer|null The id of the parent category of the channel */
     public $parent_id;
 
     public function __construct($channel) {
