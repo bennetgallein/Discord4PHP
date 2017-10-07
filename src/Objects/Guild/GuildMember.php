@@ -13,21 +13,21 @@ class GuildMember {
 
     /** @var object|null The user object of the user */
     public $user;
-    /** @var string|null the nick of the user */
+    /** @var string|null The nickname of the user */
     public $nick;
-    /** @var array|null Array of roleid's the user has */
+    /** @var array|null An array of roleid's the user has */
     public $roles;
-    /** @var boolean|null ISO8601 Timestamp when the user joined */
+    /** @var boolean|null ISO8601 timestamp when the user joined (YYYY-MM-DD) */
     public $joined_at;
-    /** @var boolean|null whether the user is deaf or not */
+    /** @var boolean|null Whether the user is deaf or not */
     public $deaf;
-    /** @var boolean|null wether the user is muted or not */
+    /** @var boolean|null Whether the user is muted or not */
     public $muted;
 
     /**
-     * This is the EGuildMember Object Constructor
+     * This is the GuildMember object constructor
      *
-     * This creates a new GuildMember Object based on the array given.
+     * This creates a new GuildMember object based on the array given.
      *
      * @param array $member is a array of an member object.
      *
