@@ -63,55 +63,56 @@ class GuildMember {
      *
      * @return string
      */
-     public function getNick() {
-         return $this->nick;
-     }
-     /**
-      * Get the user's roles
-      *
-      * Returns an array of role id's
-      *
-      * @param none
-      *
-      * @return array
-      */
-     public function getRoles() {
-         return $this->roles;
-     }
-     /**
-      * Get the timestamp when the user joined
-      *
-      * Returns the ISO8601 when the member joined at.
-      *
-      * @param none
-      *
-      * @return string
-      */
-      public function getJoinedAt() {
-          return $this->joined_at;
-      }
-      /**
-       * Get if member is deaf
-       *
-       * Returns the boolean if the user is deaf
-       *
-       * @param none
-       *
-       * @return boolean
-       */
-       public function getDeaf() {
-           return $this->deaf;
-       }
-       /**
-        * Get if member is muted
-        *
-        * Returns the boolean if the user is muted
-        *
-        * @param none
-        *
-        * @return boolean
-        */
-        public function getMuted() {
-            return $this->muted;
-        }
+    public function getNick() {
+        return $this->nick;
+    }
+    /**
+     * Get the user's roles
+     *
+     * Returns an array of role id's
+     *
+     * @param none
+     *
+     * @return array
+     */
+    public function getRoles() {
+        return $this->roles;
+    }
+    /**
+     * Get the timestamp when the user joined
+     *
+     * Returns the ISO8601 when the member joined at.
+     *
+     * @param none
+     *
+     * @return string
+     */
+    public function getJoinedAt() {
+        return $this->joined_at;
+    }
+    /**
+     * Get if member is deaf
+     *
+     * Returns the boolean if the user is deaf
+     *
+     * @param none
+     *
+     * @return boolean
+     */
+    public function getDeaf() {
+        return $this->deaf;
+    }
+    /**
+     *
+     * Get if member is muted
+     *
+     * Returns the boolean if the user is muted
+     *
+     * @param none
+     *
+     * @return boolean
+     */
+    public function getMuted() {
+        return $this->muted;
+    }
 }
