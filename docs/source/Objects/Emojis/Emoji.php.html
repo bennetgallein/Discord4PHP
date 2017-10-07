@@ -37,11 +37,11 @@
         <pre class="brush: php">&lt;?php
 /**
  * Emoji.php
- *
  */
 namespace Discord\Objects\Emojis;
 /**
- * Emoji Object REFERENCE TO DISCORD HERE
+ * This is the Emoji object. Visit the discord API for more information.
+ * @see https://discordapp.com/developers/docs/resources/emoji#emoji-object
  */
 class Emoji {
 
@@ -53,13 +53,13 @@ class Emoji {
     public $roles;
     /** @var boolean|null Whether this emoji must be wrapped in colons */
     public $require_colons;
-    /** @var boolean|null whether this emoji is managed by an integration */
+    /** @var boolean|null Whether this emoji is managed by an integration */
     public $managed;
 
     /**
-     * This is the Emoji Object Constructor
+     * This is the Emoji object constructor
      *
-     * This creates a new Emoji Object based on the array given.
+     * This creates a new Emoji object based on the array given.
      *
      * @param array $emoji is a array of an emoji objects.
      *
@@ -85,7 +85,7 @@ class Emoji {
         return $this-&gt;id;
     }
     /**
-     * Get the Emojis name
+     * Get the Emoji's name
      *
      * Returns the name of the Emoji
      *
@@ -99,7 +99,7 @@ class Emoji {
     /**
      * Get the roles that are whitelisted
      *
-     * This returns an array of role id's which are allow to use this emoji.
+     * This returns an array of role ids which are allowed to use this emoji.
      *
      * @param none
      *
@@ -123,7 +123,7 @@ class Emoji {
     /**
      * Get the boolean if the emoji is managed
      *
-     * This return a boolean if the emoji is managed by an integration
+     * This returns a boolean if the emoji is managed by an integration
      *
      * @param none
      *
