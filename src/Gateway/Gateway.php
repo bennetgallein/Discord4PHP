@@ -2,6 +2,7 @@
 namespace Discord\Gateway;
 
 use \Discord\Discord;
+use \WebSocket\Client;
 
 class Gateway {
     /*
@@ -49,5 +50,11 @@ class Gateway {
         $data = json_decode($data, true);
 
         return $data;
+    }
+    public function __construct($url) {
+        $client = new Client($url . "/?v=" . Discord::$apiv . "&encoding=json");
+        $heartbeats = $client->receive();
+
+        print_r($heartbeats);
     }
 }
